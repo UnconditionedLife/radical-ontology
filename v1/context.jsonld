@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "rad": "https://radical.world/ontology/",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "LifeFunction": "rad:LifeFunction",
+    "Level": "rad:Level",
+    "FunctionLevelContext": "rad:FunctionLevelContext",
+    "Need": "rad:Need",
+    "Protocol": "rad:Protocol",
+    "Adoption": "rad:Adoption",
+    "domainCategory": "rad:domainCategory",
+    "hasFunction": "rad:hasFunction",
+    "operatesAtLevel": "rad:operatesAtLevel",
+    "affectsLevel": "rad:affectsLevel",
+    "contextOf": "rad:contextOf",
+    "implementsNeed": "rad:implementsNeed",
+    "adoptsProtocol": "rad:adoptsProtocol",
+    "since": "rad:since",
+    "status": "rad:status",
+    "scope": "rad:scope",
+    "inputs": "rad:inputs",
+    "outputs": "rad:outputs",
+    "originMillerTerm": "rad:originMillerTerm",
+    "originNotes": "rad:originNotes",
+    "alias": "skos:altLabel",
+    "related": "skos:related",
+    "name": "schema:name",
+    "description": "schema:description"
+  }
+}
