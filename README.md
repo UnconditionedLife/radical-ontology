@@ -36,7 +36,9 @@ Reference the ontology in your JSON-LD, RDF, or other linked-data aware systems:
   "rdfs:label": "Integrating Signals",
   "schema:description": "Aggregating and coordinating incoming information..."
 }
-```json
+
+```
+
 ---
 
 **Notes**
