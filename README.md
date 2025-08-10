@@ -39,26 +39,27 @@ Reference the ontology in your JSON-LD, RDF, or other linked-data aware systems:
 
 ---
 
-## Notes
-	•	Use name and description (mapped in the context to schema:name and schema:description).
-	•	alias maps to skos:altLabel.
-	•	IRIs are stable and versioned via the folder (/v1/). For breaking changes, publish /v2/ rather than mutating /v1/.
+**Notes**
+- Use `name` and `description` (mapped in the context to `schema:name` and `schema:description`).  
+- `alias` maps to `skos:altLabel`.  
+- IRIs are stable and versioned via the folder (`/v1/`). For breaking changes, publish `/v2/` rather than mutating `/v1/`.
 
 ---
 
 ## Versioning & changes
-	•	v1/ is intended to remain stable.
-	•	Breaking changes will be published under a new version directory (v2/, v3/, …).
-	•	Clarifications/typo fixes that don’t change meaning may be applied in place.
+
+- `v1/` is intended to remain stable.  
+- Breaking changes will be published under a new version directory (`v2/`, `v3/`, …).  
+- Clarifications/typo fixes that don’t change meaning may be applied in place.
 
 ---
 
 ## Contributing
 
-Improvements and additions are welcome via pull request.
+Improvements and additions are welcome via pull request.  
 Please propose changes with clear rationale and, when possible, examples of usage across Needs/Protocols.
 
 ---
 
-**Maintainer**: Radical World
-**Project home**: https://radical.world
+**Maintainer:** Radical World  
+**Project home:** https://radical.world
