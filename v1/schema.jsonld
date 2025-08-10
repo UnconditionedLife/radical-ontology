@@ -1,60 +1,50 @@
 {
   "@context": {
-    "rad": "https://ontology.radical.world/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "schema": "https://schema.org/",
-    "skos": "http://www.w3.org/2004/02/skos/core#"
+    "@vocab": "https://ontology.radical.world/",
+    "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
   },
   "@graph": [
     {
       "@id": "rad:LifeFunction",
       "@type": "rdfs:Class",
       "rdfs:label": "Life Function",
-      "rdfs:comment": "A canonical life process (verb-based) used to index and relate content across levels of organization."
+      "rdfs:comment": "A fundamental process observed across living systems, adapted from and generalized from James Grier Miller's Living Systems Theory."
     },
     {
       "@id": "rad:LevelOfOrganization",
       "@type": "rdfs:Class",
       "rdfs:label": "Level of Organization",
-      "rdfs:comment": "A specific scale at which living processes manifest (e.g., organism, group, ecosystem)."
+      "rdfs:comment": "A scale or scope at which living systems organize, from subatomic to planetary and beyond."
     },
     {
-      "@id": "rad:hasFunction",
-      "@type": "rdf:Property",
-      "rdfs:label": "has function",
-      "rdfs:comment": "Links an entity to one or more Life Functions it performs or supports.",
-      "rdfs:domain": "schema:CreativeWork",
-      "rdfs:range": "rad:LifeFunction"
+      "@id": "rad:FunctionLevelContext",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Function-Level Context",
+      "rdfs:comment": "The contextual description of a Life Function at a specific Level of Organization."
     },
     {
-      "@id": "rad:operatesAtLevel",
+      "@id": "rad:relatedFunction",
       "@type": "rdf:Property",
-      "rdfs:label": "operates at level",
-      "rdfs:comment": "Indicates the primary level of organization where the entity operates.",
-      "rdfs:domain": "schema:CreativeWork",
-      "rdfs:range": "rad:LevelOfOrganization"
+      "rdfs:label": "Related Function",
+      "rdfs:comment": "Links a Function-Level Context to its canonical Life Function."
     },
     {
-      "@id": "rad:affectsLevel",
+      "@id": "rad:relatedLevel",
       "@type": "rdf:Property",
-      "rdfs:label": "affects level",
-      "rdfs:comment": "Indicates other levels of organization notably impacted by the entity.",
-      "rdfs:domain": "schema:CreativeWork",
-      "rdfs:range": "rad:LevelOfOrganization"
+      "rdfs:label": "Related Level",
+      "rdfs:comment": "Links a Function-Level Context to its Level of Organization."
     },
     {
       "@id": "rad:LifeFunctionScheme",
       "@type": "skos:ConceptScheme",
-      "skos:prefLabel": "Life Functions",
-      "rdfs:comment": "A controlled vocabulary of canonical life functions."
+      "rdfs:label": "Life Functions Scheme"
     },
     {
       "@id": "rad:LevelScheme",
       "@type": "skos:ConceptScheme",
-      "skos:prefLabel": "Levels of Organization",
-      "rdfs:comment": "A controlled vocabulary of organizational scales where life functions operate."
+      "rdfs:label": "Levels of Organization Scheme"
     }
   ]
 }
