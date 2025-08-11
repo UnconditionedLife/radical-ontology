@@ -1,6 +1,7 @@
 {
   "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
+    /* ---------- Classes ---------- */
     {
       "@id": "rad:LifeFunction",
       "@type": "rdfs:Class",
@@ -19,18 +20,8 @@
       "name": "Function-Level Context",
       "description": "The contextual description of a Life Function at a specific Level of Organization."
     },
-    {
-      "@id": "rad:relatedFunction",
-      "@type": "rdf:Property",
-      "name": "Related Function",
-      "description": "Links a Function-Level Context to its canonical Life Function."
-    },
-    {
-      "@id": "rad:relatedLevel",
-      "@type": "rdf:Property",
-      "name": "Related Level",
-      "description": "Links a Function-Level Context to its Level of Organization."
-    },
+
+    /* ---------- Concept Schemes ---------- */
     {
       "@id": "rad:LifeFunctionScheme",
       "@type": "skos:ConceptScheme",
@@ -42,6 +33,120 @@
       "@type": "skos:ConceptScheme",
       "name": "Levels of Organization Scheme",
       "description": "The concept scheme that defines and organizes Levels of Organization."
+    },
+
+    /* ---------- Properties in use ---------- */
+
+    /* Labels / descriptions */
+    {
+      "@id": "schema:name",
+      "@type": "rdf:Property",
+      "name": "name",
+      "description": "Human-readable primary label for a node."
+    },
+    {
+      "@id": "schema:description",
+      "@type": "rdf:Property",
+      "name": "description",
+      "description": "Human-readable explanation or summary."
+    },
+    {
+      "@id": "skos:altLabel",
+      "@type": "rdf:Property",
+      "name": "alias",
+      "description": "Alternate labels or synonyms.",
+      "rdfs:domain": [
+        "rad:LifeFunction",
+        "rad:LevelOfOrganization",
+        "rad:FunctionLevelContext"
+      ]
+    },
+
+    /* Function <-> Function flow edges */
+    {
+      "@id": "rad:inputs",
+      "@type": "rdf:Property",
+      "name": "inputs",
+      "description": "Incoming dependencies to this function, typically other Life Function IRIs.",
+      "rdfs:domain": "rad:LifeFunction",
+      "rdfs:range": "rad:LifeFunction"
+    },
+    {
+      "@id": "rad:outputs",
+      "@type": "rdf:Property",
+      "name": "outputs",
+      "description": "Downstream functions that consume this function's outputs.",
+      "rdfs:domain": "rad:LifeFunction",
+      "rdfs:range": "rad:LifeFunction"
+    },
+    {
+      "@id": "skos:related",
+      "@type": "rdf:Property",
+      "name": "related",
+      "description": "Non-directional affinity between functions (or other nodes).",
+      "rdfs:domain": "rad:LifeFunction",
+      "rdfs:range": "rad:LifeFunction"
+    },
+
+    /* Level hierarchy */
+    {
+      "@id": "skos:broader",
+      "@type": "rdf:Property",
+      "name": "broader",
+      "description": "Broader (parent) level(s) for a Level of Organization.",
+      "rdfs:domain": "rad:LevelOfOrganization",
+      "rdfs:range": "rad:LevelOfOrganization"
+    },
+    {
+      "@id": "skos:narrower",
+      "@type": "rdf:Property",
+      "name": "narrower",
+      "description": "Narrower (child) level(s) for a Level of Organization.",
+      "rdfs:domain": "rad:LevelOfOrganization",
+      "rdfs:range": "rad:LevelOfOrganization"
+    },
+    {
+      "@id": "skos:inScheme",
+      "@type": "rdf:Property",
+      "name": "inScheme",
+      "description": "Associates a concept with its organizing scheme.",
+      "rdfs:domain": [
+        "rad:LifeFunction",
+        "rad:LevelOfOrganization"
+      ],
+      "rdfs:range": "skos:ConceptScheme"
+    },
+
+    /* Function–Level Context bindings */
+    {
+      "@id": "rad:relatedFunction",
+      "@type": "rdf:Property",
+      "name": "Related Function",
+      "description": "Links a Function-Level Context to its canonical Life Function.",
+      "rdfs:domain": "rad:FunctionLevelContext",
+      "rdfs:range": "rad:LifeFunction"
+    },
+    {
+      "@id": "rad:relatedLevel",
+      "@type": "rdf:Property",
+      "name": "Related Level",
+      "description": "Links a Function-Level Context to its Level of Organization.",
+      "rdfs:domain": "rad:FunctionLevelContext",
+      "rdfs:range": "rad:LevelOfOrganization"
+    },
+
+    /* Attribution to Miller */
+    {
+      "@id": "rad:originMillerTerm",
+      "@type": "rdf:Property",
+      "name": "originMillerTerm",
+      "description": "Original Miller LST subsystem name that inspired the generalized function label."
+    },
+    {
+      "@id": "rad:originNotes",
+      "@type": "rdf:Property",
+      "name": "originNotes",
+      "description": "Context notes explaining how the Miller term was generalized."
     }
   ]
 }
