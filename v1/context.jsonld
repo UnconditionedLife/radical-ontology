@@ -1,20 +1,36 @@
 {
   "@context": {
     "rad": "https://ontology.radical.world/",
-    "schema": "http://schema.org/",
+    "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+
+    "id": "@id",
+    "type": "@type",
 
     "LifeFunction": "rad:LifeFunction",
     "LevelOfOrganization": "rad:LevelOfOrganization",
     "FunctionLevelContext": "rad:FunctionLevelContext",
 
     "name": "schema:name",
+    "alias": {
+      "@id": "skos:altLabel",
+      "@container": "@set"
+    },
     "description": "schema:description",
+
     "relatedFunction": { "@id": "rad:relatedFunction", "@type": "@id" },
     "relatedLevel": { "@id": "rad:relatedLevel", "@type": "@id" },
-    "broader": { "@id": "skos:broader", "@type": "@id" },
-    "narrower": { "@id": "skos:narrower", "@type": "@id" },
-    "inScheme": { "@id": "skos:inScheme", "@type": "@id" }
+
+    "inputs": { "@id": "rad:inputs", "@type": "@id", "@container": "@set" },
+    "outputs": { "@id": "rad:outputs", "@type": "@id", "@container": "@set" },
+    "related": { "@id": "skos:related", "@type": "@id", "@container": "@set" },
+
+    "broader": { "@id": "skos:broader", "@type": "@id", "@container": "@set" },
+    "narrower": { "@id": "skos:narrower", "@type": "@id", "@container": "@set" },
+    "inScheme": { "@id": "skos:inScheme", "@type": "@id" },
+
+    "originMillerTerm": "rad:originMillerTerm",
+    "originNotes": "rad:originNotes"
   }
 }
