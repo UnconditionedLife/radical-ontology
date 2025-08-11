@@ -2,12 +2,19 @@
   "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
     {
+      "@id": "rad:LifeFunctionScheme",
+      "type": "ConceptScheme",
+      "name": "Life Functions",
+      "description": "Canonical life functions, generalized from Miller; flat, developer-friendly form."
+    },
+
+    {
       "@id": "rad:Reproducing",
       "type": "LifeFunction",
       "name": "Reproducing",
       "alias": ["Replication", "Propagation"],
       "description": "The process by which living systems generate new entities of the same kind to maintain continuity over time.",
-      "originMillerTerm": "Reproduction",
+      "originMillerTerm": "Reproducer",
       "originNotes": "Adapted to include both biological and symbolic reproduction across living systems.",
       "inScheme": "rad:LifeFunctionScheme"
     },
@@ -67,7 +74,7 @@
       "name": "Storing",
       "alias": ["Retention", "Memory"],
       "description": "The retention of energy, matter, or information for future use.",
-      "originMillerTerm": "Storage",
+      "originMillerTerm": "Matter–Energy Storage",
       "originNotes": "Includes both biological reserves and memory in symbolic systems.",
       "inScheme": "rad:LifeFunctionScheme"
     },
@@ -77,7 +84,7 @@
       "name": "Moving",
       "alias": ["Locomotion", "Mobility"],
       "description": "The physical relocation of the system or its parts in space.",
-      "originMillerTerm": "Mover",
+      "originMillerTerm": "Motor / Actuator",
       "originNotes": "Includes movement at all scales, from cellular to planetary.",
       "inScheme": "rad:LifeFunctionScheme"
     },
@@ -97,8 +104,8 @@
       "name": "Processing Information",
       "alias": ["Computation", "Interpretation"],
       "description": "The transformation, analysis, or interpretation of information within the system.",
-      "originMillerTerm": "Decoder / Associator",
-      "originNotes": "Includes both biological signal processing and symbolic reasoning.",
+      "originMillerTerm": "Decoder / Associator / Encoder",
+      "originNotes": "Includes decoding, encoding, and associative learning/interpretation.",
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -127,8 +134,8 @@
       "name": "Regulating",
       "alias": ["Control", "Homeostasis"],
       "description": "Maintaining stability within the system by adjusting processes in response to changes.",
-      "originMillerTerm": "Regulator",
-      "originNotes": "Covers physiological and symbolic regulation mechanisms.",
+      "originMillerTerm": "Multiple (control functions: Timer, Decider, Associator)",
+      "originNotes": "Regulation spans timing, decision, and learning subsystems rather than a single Miller subsystem.",
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -137,8 +144,8 @@
       "name": "Excreting",
       "alias": ["Waste Removal", "Elimination"],
       "description": "The removal of unneeded or harmful outputs from the system.",
-      "originMillerTerm": "Excretor",
-      "originNotes": "Includes biological waste elimination and symbolic offloading of obsolete information.",
+      "originMillerTerm": "Extruder / Excretory",
+      "originNotes": "Includes biological waste elimination and externalization of unusable outputs.",
       "inScheme": "rad:LifeFunctionScheme"
     }
   ]
