@@ -1,0 +1,30 @@
+{
+  "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
+  "@graph": [
+    {
+      "@id": "https://example.radical.world/protocols/soil-carbon-sampling",
+      "type": "schema:HowTo",
+      "name": "Soil Carbon Sampling Protocol",
+      "description": "A simple field protocol for periodic soil carbon sampling and reporting.",
+      "relatedFunction": [
+        "https://ontology.radical.world/lifefunction/receiving-signals",
+        "https://ontology.radical.world/lifefunction/distributing-signals",
+        "https://ontology.radical.world/lifefunction/assessing-response"
+      ],
+      "relatedLevel": [
+        "https://ontology.radical.world/level/ecosystem",
+        "https://ontology.radical.world/level/organization"
+      ],
+      "inScheme": "rad:LifeFunctionScheme"
+    },
+
+    {
+      "@id": "https://example.radical.world/protocols/soil-carbon-sampling#context",
+      "type": "FunctionLevelContext",
+      "name": "Signal intake for ecosystem monitoring",
+      "description": "Sampling generates signals about soil carbon that inform ecosystem management decisions.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/receiving-signals",
+      "relatedLevel": "https://ontology.radical.world/level/ecosystem"
+    }
+  ]
+}
