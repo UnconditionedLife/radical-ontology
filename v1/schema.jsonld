@@ -1,7 +1,6 @@
 {
   "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
-    /* ---------- Classes ---------- */
     {
       "@id": "rad:LifeFunction",
       "@type": "rdfs:Class",
@@ -21,7 +20,33 @@
       "description": "The contextual description of a Life Function at a specific Level of Organization."
     },
 
-    /* ---------- Concept Schemes ---------- */
+    {
+      "@id": "rad:SubstrateScheme",
+      "@type": "skos:ConceptScheme",
+      "name": "Substrates",
+      "description": "What Life Functions operate on."
+    },
+    {
+      "@id": "rad:Substrate",
+      "@type": "rdfs:Class",
+      "name": "Substrate",
+      "description": "The type of entity or resource that a Life Function operates on."
+    },
+    {
+      "@id": "rad:Signal",
+      "@type": ["rad:Substrate", "skos:Concept"],
+      "name": "Signal",
+      "description": "Information-bearing patterns (sensory stimuli, messages, encoded data).",
+      "inScheme": "rad:SubstrateScheme"
+    },
+    {
+      "@id": "rad:MatterEnergy",
+      "@type": ["rad:Substrate", "skos:Concept"],
+      "name": "Matter–Energy",
+      "description": "Physical or energetic resources (nutrients, fuel, materials, power).",
+      "inScheme": "rad:SubstrateScheme"
+    },
+
     {
       "@id": "rad:LifeFunctionScheme",
       "@type": "skos:ConceptScheme",
@@ -35,9 +60,6 @@
       "description": "The concept scheme that defines and organizes Levels of Organization."
     },
 
-    /* ---------- Properties in use ---------- */
-
-    /* Labels / descriptions */
     {
       "@id": "schema:name",
       "@type": "rdf:Property",
@@ -62,7 +84,6 @@
       ]
     },
 
-    /* Function <-> Function flow edges */
     {
       "@id": "rad:inputs",
       "@type": "rdf:Property",
@@ -88,7 +109,6 @@
       "rdfs:range": "rad:LifeFunction"
     },
 
-    /* Level hierarchy */
     {
       "@id": "skos:broader",
       "@type": "rdf:Property",
@@ -112,12 +132,21 @@
       "description": "Associates a concept with its organizing scheme.",
       "rdfs:domain": [
         "rad:LifeFunction",
-        "rad:LevelOfOrganization"
+        "rad:LevelOfOrganization",
+        "rad:Substrate"
       ],
       "rdfs:range": "skos:ConceptScheme"
     },
 
-    /* Function–Level Context bindings */
+    {
+      "@id": "rad:operatesOn",
+      "@type": "rdf:Property",
+      "name": "operatesOn",
+      "description": "Indicates the substrate(s) a Life Function operates on (Signal and/or Matter–Energy).",
+      "rdfs:domain": "rad:LifeFunction",
+      "rdfs:range": "rad:Substrate"
+    },
+
     {
       "@id": "rad:relatedFunction",
       "@type": "rdf:Property",
@@ -135,7 +164,6 @@
       "rdfs:range": "rad:LevelOfOrganization"
     },
 
-    /* Attribution to Miller */
     {
       "@id": "rad:originMillerTerm",
       "@type": "rdf:Property",
