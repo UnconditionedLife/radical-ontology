@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unconditionedlife.github.io/radical-ontology/v1/schemas/function-level-context.schema.json",
+  "title": "FunctionLevelContext",
+  "type": "object",
+  "required": ["@id", "type", "name", "description", "relatedFunction", "relatedLevel"],
+  "properties": {
+    "@id": { "type": "string", "format": "uri" },
+    "type": {
+      "oneOf": [
+        { "type": "string", "const": "FunctionLevelContext" },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "contains": { "const": "FunctionLevelContext" }
+        }
+      ]
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "relatedFunction": { "type": "string", "format": "uri" },
+    "relatedLevel": { "type": "string", "format": "uri" }
+  },
+  "additionalProperties": true
+}
