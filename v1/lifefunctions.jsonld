@@ -1,419 +1,429 @@
 {
-  "@context": "https://radical.world/ontology/context.jsonld",
-  {
   "@context": "https://ontology.radical.world/v1/context.jsonld",
   "@graph": [
     {
-      "@id": "rad:integrating-signals",
-      "@type": ["LifeFunction", "skos:Concept"],
-      "name": "Integrating Signals",
-      "description": "Collecting and combining incoming signals from the environment or internal subsystems.",
-      "inScheme": "rad:LifeFunctionScheme"
+      "@id": "rad:LifeFunctionScheme",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": "Life Functions",
+      "rdfs:comment": "Controlled vocabulary of canonical life functions (generalized from Miller)."
     },
+
     {
-      "@id": "rad:assessing-response",
-      "@type": ["LifeFunction", "skos:Concept"],
-      "name": "Assessing Response",
-      "description": "Evaluating conditions to determine appropriate responses or actions.",
-      "inScheme": "rad:LifeFunctionScheme"
+      "@id": "https://ontology.radical.world/lifefunction/acquiring-resources",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Acquiring Resources",
+      "rdfs:comment": "Bringing in matter–energy from the environment for use.",
+      "skos:altLabel": ["ingest","intake","resource acquisition"],
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/transforming-resources",
+        "https://ontology.radical.world/lifefunction/storing-resources"
+      ],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/managing-exchanges"
+      ],
+      "rdfs:seeAlso": "Miller: Ingestive",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "rad:distributing-resources",
-      "@type": ["LifeFunction", "skos:Concept"],
-      "name": "Distributing Resources",
-      "description": "Allocating energy, matter, or information to where it is needed within the system.",
-      "inScheme": "rad:LifeFunctionScheme"
+      "@id": "https://ontology.radical.world/lifefunction/transforming-resources",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Transforming Resources",
+      "rdfs:comment": "Changing incoming matter–energy into usable forms.",
+      "skos:altLabel": ["convert","process","metabolize"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/acquiring-resources"
+      ],
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/generating-usable-energy"
+      ],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/generating-usable-energy",
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/adjusting-patterns"
+      ],
+      "rdfs:seeAlso": "Miller: Digestive",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "rad:maintaining-boundaries",
-      "@type": ["LifeFunction", "skos:Concept"],
-      "name": "Maintaining Boundaries",
-      "description": "Regulating exchange between the system and its environment to sustain integrity.",
-      "inScheme": "rad:LifeFunctionScheme"
+      "@id": "https://ontology.radical.world/lifefunction/distributing-resources",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Distributing Resources",
+      "rdfs:comment": "Moving matter–energy internally to where it is needed.",
+      "skos:altLabel": ["circulate","transport","allocate"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/transforming-resources",
+        "https://ontology.radical.world/lifefunction/storing-resources",
+        "https://ontology.radical.world/lifefunction/acquiring-resources"
+      ],
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/storing-resources",
+        "https://ontology.radical.world/lifefunction/eliminating-byproducts"
+      ],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/changing-position",
+        "https://ontology.radical.world/lifefunction/synchronizing-activities",
+        "https://ontology.radical.world/lifefunction/managing-exchanges"
+      ],
+      "rdfs:seeAlso": "Miller: Distributive",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/acquiring-resources",
-      "@type": "LifeFunction",
-      "name": "Acquiring Resources",
-      "description": "Bringing in matter\u2013energy from the environment for use.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Ingestive",
-      "alias": [
-        "ingest",
-        "intake",
-        "resource acquisition"
+      "@id": "https://ontology.radical.world/lifefunction/storing-resources",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Storing Resources",
+      "rdfs:comment": "Holding matter–energy in reserve for future use or stability.",
+      "skos:altLabel": ["reserve","buffer","cache"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/acquiring-resources"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/transforming-resources",
-        "https://radical.world/ontology/lifefunction/storing-resources"
-      ]
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/generating-usable-energy"
+      ],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/generating-usable-energy",
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
+      ],
+      "rdfs:seeAlso": "Miller: Storage",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/transforming-resources",
-      "@type": "LifeFunction",
-      "name": "Transforming Resources",
-      "description": "Changing incoming matter\u2013energy into forms usable by the system.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Digestive",
-      "alias": [
-        "convert",
-        "process",
-        "metabolize"
+      "@id": "https://ontology.radical.world/lifefunction/maintaining-boundaries",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Maintaining Boundaries",
+      "rdfs:comment": "Regulating exchanges of matter–energy with the environment.",
+      "skos:altLabel": ["permeability","gatekeeping","containment"],
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/acquiring-resources",
+        "https://ontology.radical.world/lifefunction/eliminating-byproducts"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/distributing-resources",
-        "https://radical.world/ontology/lifefunction/generating-usable-energy"
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/protecting-structure",
+        "https://ontology.radical.world/lifefunction/managing-exchanges"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/acquiring-resources"
-      ]
+      "rdfs:seeAlso": "Miller: Boundary",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/distributing-resources",
-      "@type": "LifeFunction",
-      "name": "Distributing Resources",
-      "description": "Moving matter\u2013energy internally to where it is needed.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Distributive",
-      "alias": [
-        "circulate",
-        "transport",
-        "allocate"
+      "@id": "https://ontology.radical.world/lifefunction/protecting-structure",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Protecting the Structure",
+      "rdfs:comment": "Preventing damage or disruption from internal or external forces.",
+      "skos:altLabel": ["defend","safeguard","stabilize"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/storing-resources",
-        "https://radical.world/ontology/lifefunction/eliminating-byproducts"
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/transforming-resources",
-        "https://radical.world/ontology/lifefunction/storing-resources",
-        "https://radical.world/ontology/lifefunction/acquiring-resources"
-      ]
+      "rdfs:seeAlso": "Miller: Protective",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/storing-resources",
-      "@type": "LifeFunction",
-      "name": "Storing Resources",
-      "description": "Holding matter\u2013energy in reserve for future use or stability.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Storage",
-      "alias": [
-        "reserve",
-        "buffer",
-        "cache"
+      "@id": "https://ontology.radical.world/lifefunction/eliminating-byproducts",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Eliminating Byproducts",
+      "rdfs:comment": "Removing unusable or harmful matter–energy from the system.",
+      "skos:altLabel": ["egest","expel","waste removal"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/distributing-resources"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/distributing-resources",
-        "https://radical.world/ontology/lifefunction/generating-usable-energy"
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/distributing-resources",
-        "https://radical.world/ontology/lifefunction/acquiring-resources"
-      ]
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/managing-exchanges"
+      ],
+      "rdfs:seeAlso": "Miller: Excretory",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/maintaining-boundaries",
-      "@type": "LifeFunction",
-      "name": "Maintaining Boundaries",
-      "description": "Regulating exchanges of matter\u2013energy with the environment.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Boundary",
-      "alias": [
-        "permeability",
-        "gatekeeping",
-        "containment"
+      "@id": "https://ontology.radical.world/lifefunction/changing-position",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Changing Position",
+      "rdfs:comment": "Altering the location or configuration of the system or its parts in space.",
+      "skos:altLabel": ["move","locomote","reconfigure"],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/synchronizing-activities",
+        "https://ontology.radical.world/lifefunction/assessing-response"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/acquiring-resources",
-        "https://radical.world/ontology/lifefunction/eliminating-byproducts"
-      ]
+      "rdfs:seeAlso": "Miller: Motor",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/protecting-structure",
-      "@type": "LifeFunction",
-      "name": "Protecting the Structure",
-      "description": "Preventing damage or disruption from internal or external forces.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Protective",
-      "alias": [
-        "defend",
-        "safeguard",
-        "stabilize"
+      "@id": "https://ontology.radical.world/lifefunction/generating-usable-energy",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Generating Usable Energy",
+      "rdfs:comment": "Producing usable energy from stored or incoming sources.",
+      "skos:altLabel": ["energize","energy production"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/transforming-resources",
+        "https://ontology.radical.world/lifefunction/storing-resources"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/maintaining-boundaries"
-      ]
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/transforming-resources",
+        "https://ontology.radical.world/lifefunction/distributing-resources"
+      ],
+      "rdfs:seeAlso": "Miller: Metabolic",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/eliminating-byproducts",
-      "@type": "LifeFunction",
-      "name": "Eliminating Byproducts",
-      "description": "Removing unusable or harmful matter\u2013energy from the system.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Excretory",
-      "alias": [
-        "egest",
-        "expel",
-        "waste removal"
+      "@id": "https://ontology.radical.world/lifefunction/receiving-signals",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Receiving Signals",
+      "rdfs:comment": "Detecting external signals and translating them for internal use.",
+      "skos:altLabel": ["sense","detect","perceive"],
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/transforming-signals",
+        "https://ontology.radical.world/lifefunction/integrating-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/maintaining-boundaries"
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/transforming-signals",
+        "https://ontology.radical.world/lifefunction/distributing-signals",
+        "https://ontology.radical.world/lifefunction/managing-exchanges"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/distributing-resources"
-      ]
+      "rdfs:seeAlso": "Miller: Input Transducer",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/changing-position",
-      "@type": "LifeFunction",
-      "name": "Changing Position",
-      "description": "Altering the location or configuration of the system or its parts in space.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Motor",
-      "alias": [
-        "move",
-        "locomote",
-        "reconfigure"
-      ]
+      "@id": "https://ontology.radical.world/lifefunction/sending-signals",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Sending Signals",
+      "rdfs:comment": "Translating internal information into signals to the environment.",
+      "skos:altLabel": ["signal-out","broadcast","express"],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/transforming-signals",
+        "https://ontology.radical.world/lifefunction/distributing-signals",
+        "https://ontology.radical.world/lifefunction/assessing-response",
+        "https://ontology.radical.world/lifefunction/managing-exchanges"
+      ],
+      "rdfs:seeAlso": "Miller: Output Transducer",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/generating-usable-energy",
-      "@type": "LifeFunction",
-      "name": "Generating Usable Energy",
-      "description": "Producing usable energy from stored or incoming sources.",
-      "domainCategory": "energy-matter",
-      "originMillerTerm": "Metabolic (Ingestive/Digestive)",
-      "alias": [
-        "energize",
-        "energy production"
+      "@id": "https://ontology.radical.world/lifefunction/distributing-signals",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Distributing Signals",
+      "rdfs:comment": "Routing information between components inside the system.",
+      "skos:altLabel": ["route","relay","circulate info"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/transforming-signals",
+        "https://ontology.radical.world/lifefunction/integrating-signals"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/transforming-resources",
-        "https://radical.world/ontology/lifefunction/storing-resources"
-      ]
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/assessing-response",
+        "https://ontology.radical.world/lifefunction/synchronizing-activities"
+      ],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/receiving-signals",
+        "https://ontology.radical.world/lifefunction/sending-signals",
+        "https://ontology.radical.world/lifefunction/transforming-signals",
+        "https://ontology.radical.world/lifefunction/channel-net"
+      ],
+      "rdfs:seeAlso": "Miller: Internal Transducer / Channel & Net",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/receiving-signals",
-      "@type": "LifeFunction",
-      "name": "Receiving Signals",
-      "description": "Detecting external signals and translating them for internal use.",
-      "domainCategory": "information",
-      "originMillerTerm": "Input Transducer",
-      "alias": [
-        "sense",
-        "detect",
-        "perceive"
+      "@id": "https://ontology.radical.world/lifefunction/integrating-signals",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Integrating Signals",
+      "rdfs:comment": "Incorporating signals into the system’s ongoing structure for potential future activation.",
+      "skos:altLabel": ["encode","consolidate","embed"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/receiving-signals",
+        "https://ontology.radical.world/lifefunction/transforming-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/transforming-signals",
-        "https://radical.world/ontology/lifefunction/integrating-signals"
-      ]
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/reactivating-signals",
+        "https://ontology.radical.world/lifefunction/assessing-response"
+      ],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/reactivating-signals",
+        "https://ontology.radical.world/lifefunction/assessing-response",
+        "https://ontology.radical.world/lifefunction/adjusting-patterns"
+      ],
+      "rdfs:seeAlso": "Miller: Memory",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/sending-signals",
-      "@type": "LifeFunction",
-      "name": "Sending Signals",
-      "description": "Translating internal information into signals to the environment.",
-      "domainCategory": "information",
-      "originMillerTerm": "Output Transducer",
-      "alias": [
-        "signal-out",
-        "broadcast",
-        "express"
-      ]
+      "@id": "https://ontology.radical.world/lifefunction/reactivating-signals",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Reactivating Signals",
+      "rdfs:comment": "Bringing stored patterns or signals into present use.",
+      "skos:altLabel": ["retrieve","recall","reinstantiate"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/integrating-signals"
+      ],
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/assessing-response",
+        "https://ontology.radical.world/lifefunction/synchronizing-activities"
+      ],
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/integrating-signals",
+        "https://ontology.radical.world/lifefunction/assessing-response"
+      ],
+      "rdfs:seeAlso": "Miller: Recall (Memory)",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/distributing-signals",
-      "@type": "LifeFunction",
-      "name": "Distributing Signals",
-      "description": "Routing information between components inside the system.",
-      "domainCategory": "information",
-      "originMillerTerm": "Internal Transducer / Channel & Net",
-      "alias": [
-        "route",
-        "relay",
-        "circulate info"
+      "@id": "https://ontology.radical.world/lifefunction/transforming-signals",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Transforming Signals",
+      "rdfs:comment": "Changing signal form or structure for internal or external use.",
+      "skos:altLabel": ["translate","recode","format"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/receiving-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/assessing-response",
-        "https://radical.world/ontology/lifefunction/synchronizing-activities"
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/distributing-signals",
+        "https://ontology.radical.world/lifefunction/integrating-signals",
+        "https://ontology.radical.world/lifefunction/sending-signals"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/transforming-signals",
-        "https://radical.world/ontology/lifefunction/integrating-signals"
-      ]
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/receiving-signals",
+        "https://ontology.radical.world/lifefunction/sending-signals",
+        "https://ontology.radical.world/lifefunction/distributing-signals"
+      ],
+      "rdfs:seeAlso": "Miller: Decoder / Encoder",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/integrating-signals",
-      "@type": "LifeFunction",
-      "name": "Integrating Signals",
-      "description": "Incorporating signals into the system\u2019s ongoing structure for potential future activation.",
-      "domainCategory": "information",
-      "originMillerTerm": "Memory",
-      "alias": [
-        "encode",
-        "consolidate",
-        "embed"
+      "@id": "https://ontology.radical.world/lifefunction/assessing-response",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Assessing Response",
+      "rdfs:comment": "Selecting a course of action based on the system’s current state and available signals.",
+      "skos:altLabel": ["evaluate","select action","choose"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/integrating-signals",
+        "https://ontology.radical.world/lifefunction/reactivating-signals",
+        "https://ontology.radical.world/lifefunction/distributing-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/reactivating-signals",
-        "https://radical.world/ontology/lifefunction/assessing-response"
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/synchronizing-activities",
+        "https://ontology.radical.world/lifefunction/sending-signals",
+        "https://ontology.radical.world/lifefunction/changing-position"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/receiving-signals",
-        "https://radical.world/ontology/lifefunction/transforming-signals"
-      ]
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/synchronizing-activities",
+        "https://ontology.radical.world/lifefunction/adjusting-patterns"
+      ],
+      "rdfs:seeAlso": "Miller: Decider",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/reactivating-signals",
-      "@type": "LifeFunction",
-      "name": "Reactivating Signals",
-      "description": "Bringing stored patterns or signals into present use.",
-      "domainCategory": "information",
-      "originMillerTerm": "Recall (Memory)",
-      "alias": [
-        "retrieve",
-        "recall",
-        "reinstantiate"
+      "@id": "https://ontology.radical.world/lifefunction/synchronizing-activities",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Synchronizing Activities",
+      "rdfs:comment": "Aligning the timing and interaction of different processes.",
+      "skos:altLabel": ["coordinate","schedule","orchestrate"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/assessing-response",
+        "https://ontology.radical.world/lifefunction/distributing-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/assessing-response",
-        "https://radical.world/ontology/lifefunction/synchronizing-activities"
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/transforming-resources",
+        "https://ontology.radical.world/lifefunction/distributing-resources"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/integrating-signals"
-      ]
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/assessing-response",
+        "https://ontology.radical.world/lifefunction/changing-position"
+      ],
+      "rdfs:seeAlso": "Miller: Coordinator / Timer",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/transforming-signals",
-      "@type": "LifeFunction",
-      "name": "Transforming Signals",
-      "description": "Changing signal form or structure for internal or external use.",
-      "domainCategory": "information",
-      "originMillerTerm": "Decoder / Encoder",
-      "alias": [
-        "translate",
-        "recode",
-        "format"
+      "@id": "https://ontology.radical.world/lifefunction/adjusting-patterns",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Adjusting Patterns",
+      "rdfs:comment": "Modifying structures, behaviors, or processes in response to changes in conditions.",
+      "skos:altLabel": ["adapt","learn","reconfigure"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/assessing-response",
+        "https://ontology.radical.world/lifefunction/integrating-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/distributing-signals",
-        "https://radical.world/ontology/lifefunction/integrating-signals",
-        "https://radical.world/ontology/lifefunction/sending-signals"
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
+        "https://ontology.radical.world/lifefunction/transforming-resources",
+        "https://ontology.radical.world/lifefunction/synchronizing-activities"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/receiving-signals"
-      ]
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/integrating-signals",
+        "https://ontology.radical.world/lifefunction/assessing-response"
+      ],
+      "rdfs:seeAlso": "Miller: Learning / Adaptation / Associator",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/assessing-response",
-      "@type": "LifeFunction",
-      "name": "Assessing Response",
-      "description": "Selecting a course of action based on the system\u2019s current state and available signals.",
-      "domainCategory": "information",
-      "originMillerTerm": "Decider",
-      "alias": [
-        "evaluate",
-        "select action",
-        "choose"
+      "@id": "https://ontology.radical.world/lifefunction/regenerating-continuity",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Regenerating Continuity",
+      "rdfs:comment": "Creating new systems or components to sustain lineage and persistence.",
+      "skos:altLabel": ["reproduce","renew","propagate"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/generating-usable-energy",
+        "https://ontology.radical.world/lifefunction/integrating-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/synchronizing-activities",
-        "https://radical.world/ontology/lifefunction/sending-signals",
-        "https://radical.world/ontology/lifefunction/changing-position"
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/acquiring-resources",
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/integrating-signals",
-        "https://radical.world/ontology/lifefunction/reactivating-signals",
-        "https://radical.world/ontology/lifefunction/distributing-signals"
-      ]
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/adjusting-patterns"
+      ],
+      "rdfs:seeAlso": "Miller: Reproducer",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     },
+
     {
-      "@id": "https://radical.world/ontology/lifefunction/synchronizing-activities",
-      "@type": "LifeFunction",
-      "name": "Synchronizing Activities",
-      "description": "Aligning the timing and interaction of different processes.",
-      "domainCategory": "information",
-      "originMillerTerm": "Coordinator / Timer",
-      "alias": [
-        "coordinate",
-        "schedule",
-        "orchestrate"
+      "@id": "https://ontology.radical.world/lifefunction/managing-exchanges",
+      "@type": ["rad:LifeFunction","skos:Concept"],
+      "skos:prefLabel": "Managing Exchanges",
+      "rdfs:comment": "Handling flows of matter–energy and information between system and environment.",
+      "skos:altLabel": ["interface","exchange","interact"],
+      "rad:inputs": [
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
+        "https://ontology.radical.world/lifefunction/sending-signals",
+        "https://ontology.radical.world/lifefunction/receiving-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/transforming-resources",
-        "https://radical.world/ontology/lifefunction/distributing-resources"
+      "rad:outputs": [
+        "https://ontology.radical.world/lifefunction/acquiring-resources",
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/distributing-signals"
       ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/assessing-response",
-        "https://radical.world/ontology/lifefunction/distributing-signals"
-      ]
-    },
-    {
-      "@id": "https://radical.world/ontology/lifefunction/adjusting-patterns",
-      "@type": "LifeFunction",
-      "name": "Adjusting Patterns",
-      "description": "Modifying structures, behaviors, or processes in response to changes in conditions.",
-      "domainCategory": "information",
-      "originMillerTerm": "Learning / Adaptation / Associator",
-      "alias": [
-        "adapt",
-        "learn",
-        "reconfigure"
+      "skos:related": [
+        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
+        "https://ontology.radical.world/lifefunction/acquiring-resources",
+        "https://ontology.radical.world/lifefunction/distributing-resources",
+        "https://ontology.radical.world/lifefunction/eliminating-byproducts",
+        "https://ontology.radical.world/lifefunction/receiving-signals",
+        "https://ontology.radical.world/lifefunction/sending-signals"
       ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/maintaining-boundaries",
-        "https://radical.world/ontology/lifefunction/transforming-resources",
-        "https://radical.world/ontology/lifefunction/synchronizing-activities"
-      ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/assessing-response",
-        "https://radical.world/ontology/lifefunction/integrating-signals"
-      ]
-    },
-    {
-      "@id": "https://radical.world/ontology/lifefunction/regenerating-continuity",
-      "@type": "LifeFunction",
-      "name": "Regenerating Continuity",
-      "description": "Creating new systems or components to sustain lineage and persistence.",
-      "domainCategory": "hybrid",
-      "originMillerTerm": "Reproducer",
-      "alias": [
-        "reproduce",
-        "renew",
-        "propagate"
-      ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/acquiring-resources",
-        "https://radical.world/ontology/lifefunction/maintaining-boundaries"
-      ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/generating-usable-energy",
-        "https://radical.world/ontology/lifefunction/integrating-signals"
-      ]
-    },
-    {
-      "@id": "https://radical.world/ontology/lifefunction/managing-exchanges",
-      "@type": "LifeFunction",
-      "name": "Managing Exchanges",
-      "description": "Handling flows of matter\u2013energy and information between system and environment.",
-      "domainCategory": "hybrid",
-      "originMillerTerm": "Interface / Multi-subsystem",
-      "alias": [
-        "interface",
-        "exchange",
-        "interact"
-      ],
-      "outputs": [
-        "https://radical.world/ontology/lifefunction/acquiring-resources",
-        "https://radical.world/ontology/lifefunction/distributing-resources",
-        "https://radical.world/ontology/lifefunction/distributing-signals"
-      ],
-      "inputs": [
-        "https://radical.world/ontology/lifefunction/maintaining-boundaries",
-        "https://radical.world/ontology/lifefunction/sending-signals",
-        "https://radical.world/ontology/lifefunction/receiving-signals"
-      ]
+      "rdfs:seeAlso": "Multi-subsystem / Interface",
+      "skos:inScheme": "rad:LifeFunctionScheme"
     }
   ]
 }
