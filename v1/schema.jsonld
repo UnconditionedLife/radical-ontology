@@ -19,7 +19,6 @@
       "name": "Function-Level Context",
       "description": "The contextual description of a Life Function at a specific Level of Organization."
     },
-
     {
       "@id": "rad:SubstrateScheme",
       "@type": "skos:ConceptScheme",
@@ -46,7 +45,6 @@
       "description": "Physical or energetic resources (nutrients, fuel, materials, power).",
       "inScheme": "rad:SubstrateScheme"
     },
-
     {
       "@id": "rad:LifeFunctionScheme",
       "@type": "skos:ConceptScheme",
@@ -59,7 +57,6 @@
       "name": "Levels of Organization Scheme",
       "description": "The concept scheme that defines and organizes Levels of Organization."
     },
-
     {
       "@id": "schema:name",
       "@type": "rdf:Property",
@@ -83,7 +80,6 @@
         "rad:FunctionLevelContext"
       ]
     },
-
     {
       "@id": "rad:inputs",
       "@type": "rdf:Property",
@@ -146,7 +142,6 @@
       "rdfs:domain": "rad:LifeFunction",
       "rdfs:range": "rad:Substrate"
     },
-
     {
       "@id": "rad:relatedFunction",
       "@type": "rdf:Property",
