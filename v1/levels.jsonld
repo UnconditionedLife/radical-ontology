@@ -3,229 +3,229 @@
   "@graph": [
     {
       "@id": "rad:LevelScheme",
-      "@type": "skos:ConceptScheme",
-      "skos:prefLabel": "Levels of Organization",
-      "rdfs:comment": "A controlled vocabulary of organizational scales (bio, social, ecological, and cosmic)."
+      "type": "ConceptScheme",
+      "name": "Levels of Organization",
+      "description": "A controlled vocabulary of organizational scales (bio, social, ecological, and cosmic)."
     },
 
     {
       "@id": "https://ontology.radical.world/level/subatomic",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Subatomic",
-      "skos:altLabel": ["Quantum Scale","Particle Level"],
-      "rdfs:comment": "Quarks, leptons, gauge bosons; quantum interactions.",
-      "skos:broader": "https://ontology.radical.world/level/atomic",
-      "skos:narrower": [],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Subatomic",
+      "alias": ["Quantum Scale","Particle Level"],
+      "description": "Quarks, leptons, gauge bosons; quantum interactions.",
+      "broader": ["https://ontology.radical.world/level/atomic"],
+      "narrower": [],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/atomic",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Atomic",
-      "skos:altLabel": ["Element Level"],
-      "rdfs:comment": "Atoms as units of chemical elements; orbitals, ionization, bonding capacity.",
-      "skos:broader": "https://ontology.radical.world/level/molecular",
-      "skos:narrower": ["https://ontology.radical.world/level/subatomic"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Atomic",
+      "alias": ["Element Level"],
+      "description": "Atoms as units of chemical elements; orbitals, ionization, bonding capacity.",
+      "broader": ["https://ontology.radical.world/level/molecular"],
+      "narrower": ["https://ontology.radical.world/level/subatomic"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/molecular",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Molecular",
-      "skos:altLabel": ["Chemistry Level","Biomolecular"],
-      "rdfs:comment": "Molecules and macromolecules (water, proteins, DNA/RNA); reactions and folding.",
-      "skos:broader": "https://ontology.radical.world/level/organelle",
-      "skos:narrower": ["https://ontology.radical.world/level/atomic"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Molecular",
+      "alias": ["Chemistry Level","Biomolecular"],
+      "description": "Molecules and macromolecules (water, proteins, DNA/RNA); reactions and folding.",
+      "broader": ["https://ontology.radical.world/level/organelle"],
+      "narrower": ["https://ontology.radical.world/level/atomic"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/organelle",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Organelle",
-      "rdfs:comment": "Cellular compartments (nucleus, mitochondria, chloroplasts, ribosomes) performing localized functions.",
-      "skos:broader": "https://ontology.radical.world/level/cellular",
-      "skos:narrower": ["https://ontology.radical.world/level/molecular"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Organelle",
+      "description": "Cellular compartments (nucleus, mitochondria, chloroplasts, ribosomes) performing localized functions.",
+      "broader": ["https://ontology.radical.world/level/cellular"],
+      "narrower": ["https://ontology.radical.world/level/molecular"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/cellular",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Cellular",
-      "skos:altLabel": ["Cell"],
-      "rdfs:comment": "Smallest living unit; membranes, metabolism, homeostasis, reproduction.",
-      "skos:broader": "https://ontology.radical.world/level/tissue",
-      "skos:narrower": ["https://ontology.radical.world/level/organelle"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Cellular",
+      "alias": ["Cell"],
+      "description": "Smallest living unit; membranes, metabolism, homeostasis, reproduction.",
+      "broader": ["https://ontology.radical.world/level/tissue"],
+      "narrower": ["https://ontology.radical.world/level/organelle"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/tissue",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Tissue",
-      "rdfs:comment": "Cooperating cells with similar structure and function (e.g., epithelial, muscle, vascular).",
-      "skos:broader": "https://ontology.radical.world/level/organ",
-      "skos:narrower": ["https://ontology.radical.world/level/cellular"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Tissue",
+      "description": "Cooperating cells with similar structure and function (e.g., epithelial, muscle, vascular).",
+      "broader": ["https://ontology.radical.world/level/organ"],
+      "narrower": ["https://ontology.radical.world/level/cellular"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/organ",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Organ",
-      "rdfs:comment": "Anatomical units made of multiple tissues performing specialized functions (e.g., heart, leaf).",
-      "skos:broader": "https://ontology.radical.world/level/organism",
-      "skos:narrower": ["https://ontology.radical.world/level/tissue"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Organ",
+      "description": "Anatomical units made of multiple tissues performing specialized functions (e.g., heart, leaf).",
+      "broader": ["https://ontology.radical.world/level/organism"],
+      "narrower": ["https://ontology.radical.world/level/tissue"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/organism",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Organism",
-      "skos:altLabel": ["Individual"],
-      "rdfs:comment": "An individual living system capable of independent function.",
-      "skos:broader": "https://ontology.radical.world/level/population",
-      "skos:narrower": ["https://ontology.radical.world/level/organ"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Organism",
+      "alias": ["Individual"],
+      "description": "An individual living system capable of independent function.",
+      "broader": ["https://ontology.radical.world/level/population"],
+      "narrower": ["https://ontology.radical.world/level/organ"],
+      "inScheme": "rad:LevelScheme"
     },
 
     {
       "@id": "https://ontology.radical.world/level/population",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Population",
-      "rdfs:comment": "Members of the same species in a defined area with gene flow and demographic dynamics.",
-      "skos:broader": "https://ontology.radical.world/level/community",
-      "skos:narrower": ["https://ontology.radical.world/level/organism"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Population",
+      "description": "Members of the same species in a defined area with gene flow and demographic dynamics.",
+      "broader": ["https://ontology.radical.world/level/community"],
+      "narrower": ["https://ontology.radical.world/level/organism"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/community",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Community",
-      "skos:altLabel": ["Biotic Community"],
-      "rdfs:comment": "Interacting populations of different species in a shared locale; may include human communities.",
-      "skos:broader": "https://ontology.radical.world/level/ecosystem",
-      "skos:narrower": [
+      "type": "LevelOfOrganization",
+      "name": "Community",
+      "alias": ["Biotic Community"],
+      "description": "Interacting populations of different species in a shared locale; may include human communities.",
+      "broader": ["https://ontology.radical.world/level/ecosystem"],
+      "narrower": [
         "https://ontology.radical.world/level/population",
         "https://ontology.radical.world/level/city",
         "https://ontology.radical.world/level/organization"
       ],
-      "skos:inScheme": "rad:LevelScheme"
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/ecosystem",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Ecosystem",
-      "rdfs:comment": "Biotic communities plus abiotic environment linked by flows of matter, energy, and information.",
-      "skos:broader": "https://ontology.radical.world/level/biome",
-      "skos:narrower": [
+      "type": "LevelOfOrganization",
+      "name": "Ecosystem",
+      "description": "Biotic communities plus abiotic environment linked by flows of matter, energy, and information.",
+      "broader": ["https://ontology.radical.world/level/biome"],
+      "narrower": [
         "https://ontology.radical.world/level/community",
         "https://ontology.radical.world/level/network"
       ],
-      "skos:inScheme": "rad:LevelScheme"
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/biome",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Biome",
-      "rdfs:comment": "Large ecological regions defined by climate and dominant vegetation (e.g., tundra, rainforest).",
-      "skos:broader": "https://ontology.radical.world/level/biosphere",
-      "skos:narrower": ["https://ontology.radical.world/level/ecosystem"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Biome",
+      "description": "Large ecological regions defined by climate and dominant vegetation (e.g., tundra, rainforest).",
+      "broader": ["https://ontology.radical.world/level/biosphere"],
+      "narrower": ["https://ontology.radical.world/level/ecosystem"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/biosphere",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Biosphere",
-      "skos:altLabel": ["Planetary"],
-      "rdfs:comment": "Global sum of ecosystems where life exists and cycles interact with Earth systems.",
-      "skos:broader": "https://ontology.radical.world/level/stellar-system",
-      "skos:narrower": [
+      "type": "LevelOfOrganization",
+      "name": "Biosphere",
+      "alias": ["Planetary"],
+      "description": "Global sum of ecosystems where life exists and cycles interact with Earth systems.",
+      "broader": ["https://ontology.radical.world/level/stellar-system"],
+      "narrower": [
         "https://ontology.radical.world/level/biome",
         "https://ontology.radical.world/level/region",
         "https://ontology.radical.world/level/network"
       ],
-      "skos:inScheme": "rad:LevelScheme"
+      "inScheme": "rad:LevelScheme"
     },
 
     {
       "@id": "https://ontology.radical.world/level/dyad",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Dyad",
-      "skos:altLabel": ["Pair"],
-      "rdfs:comment": "Two individuals coordinating together (e.g., caregiver–infant, mentor–mentee).",
-      "skos:broader": "https://ontology.radical.world/level/household",
-      "skos:narrower": [],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Dyad",
+      "alias": ["Pair"],
+      "description": "Two individuals coordinating together (e.g., caregiver–infant, mentor–mentee).",
+      "broader": ["https://ontology.radical.world/level/household"],
+      "narrower": [],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/household",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Household",
-      "skos:altLabel": ["Home"],
-      "rdfs:comment": "Co-residing unit sharing resources and daily coordination.",
-      "skos:broader": "https://ontology.radical.world/level/group",
-      "skos:narrower": ["https://ontology.radical.world/level/dyad"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Household",
+      "alias": ["Home"],
+      "description": "Co-residing unit sharing resources and daily coordination.",
+      "broader": ["https://ontology.radical.world/level/group"],
+      "narrower": ["https://ontology.radical.world/level/dyad"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/group",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Group",
-      "skos:altLabel": ["Team","Crew"],
-      "rdfs:comment": "Small set collaborating with shared intent and practices.",
-      "skos:broader": "https://ontology.radical.world/level/organization",
-      "skos:narrower": [
+      "type": "LevelOfOrganization",
+      "name": "Group",
+      "alias": ["Team","Crew"],
+      "description": "Small set collaborating with shared intent and practices.",
+      "broader": ["https://ontology.radical.world/level/organization"],
+      "narrower": [
         "https://ontology.radical.world/level/household",
         "https://ontology.radical.world/level/network"
       ],
-      "skos:inScheme": "rad:LevelScheme"
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/organization",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Organization",
-      "skos:altLabel": ["Org","Institution"],
-      "rdfs:comment": "Structured entity coordinating multiple groups via roles, rules, and resources.",
-      "skos:broader": "https://ontology.radical.world/level/city",
-      "skos:narrower": [
+      "type": "LevelOfOrganization",
+      "name": "Organization",
+      "alias": ["Org","Institution"],
+      "description": "Structured entity coordinating multiple groups via roles, rules, and resources.",
+      "broader": ["https://ontology.radical.world/level/city"],
+      "narrower": [
         "https://ontology.radical.world/level/group",
         "https://ontology.radical.world/level/network"
       ],
-      "skos:inScheme": "rad:LevelScheme"
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/city",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "City",
-      "skos:altLabel": ["Town","Municipality","Metro"],
-      "rdfs:comment": "Municipal-scale human settlement with shared infrastructure and governance.",
-      "skos:broader": "https://ontology.radical.world/level/region",
-      "skos:narrower": [
+      "type": "LevelOfOrganization",
+      "name": "City",
+      "alias": ["Town","Municipality","Metro"],
+      "description": "Municipal-scale human settlement with shared infrastructure and governance.",
+      "broader": ["https://ontology.radical.world/level/region"],
+      "narrower": [
         "https://ontology.radical.world/level/organization",
         "https://ontology.radical.world/level/community",
         "https://ontology.radical.world/level/network"
       ],
-      "skos:inScheme": "rad:LevelScheme"
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/region",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Region",
-      "skos:altLabel": ["County","State","Province","Bioregion"],
-      "rdfs:comment": "Multi-city area sharing ecology, economy, and/or governance.",
-      "skos:broader": "https://ontology.radical.world/level/biosphere",
-      "skos:narrower": [
+      "type": "LevelOfOrganization",
+      "name": "Region",
+      "alias": ["County","State","Province","Bioregion"],
+      "description": "Multi-city area sharing ecology, economy, and/or governance.",
+      "broader": ["https://ontology.radical.world/level/biosphere"],
+      "narrower": [
         "https://ontology.radical.world/level/city",
         "https://ontology.radical.world/level/network"
       ],
-      "skos:inScheme": "rad:LevelScheme"
+      "inScheme": "rad:LevelScheme"
     },
 
     {
       "@id": "https://ontology.radical.world/level/network",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Network",
-      "skos:altLabel": ["Distributed Network"],
-      "rdfs:comment": "Cross-boundary connections among actors or systems (often spans multiple other levels).",
-      "skos:broader": [
+      "type": "LevelOfOrganization",
+      "name": "Network",
+      "alias": ["Distributed Network"],
+      "description": "Cross-boundary connections among actors or systems (often spans multiple other levels).",
+      "broader": [
         "https://ontology.radical.world/level/region",
         "https://ontology.radical.world/level/ecosystem",
         "https://ontology.radical.world/level/city",
@@ -233,47 +233,48 @@
         "https://ontology.radical.world/level/group",
         "https://ontology.radical.world/level/biosphere"
       ],
-      "skos:narrower": [],
-      "skos:inScheme": "rad:LevelScheme"
+      "narrower": [],
+      "inScheme": "rad:LevelScheme"
     },
 
     {
       "@id": "https://ontology.radical.world/level/stellar-system",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Stellar System",
-      "skos:altLabel": ["Planetary System","Solar System"],
-      "rdfs:comment": "A star and its orbiting bodies and fields.",
-      "skos:broader": "https://ontology.radical.world/level/galactic",
-      "skos:narrower": ["https://ontology.radical.world/level/biosphere"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Stellar System",
+      "alias": ["Planetary System","Solar System"],
+      "description": "A star and its orbiting bodies and fields.",
+      "broader": ["https://ontology.radical.world/level/galactic"],
+      "narrower": ["https://ontology.radical.world/level/biosphere"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/galactic",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Galactic",
-      "rdfs:comment": "A gravitationally bound system of stars, stellar remnants, gas, dust, and dark matter.",
-      "skos:broader": "https://ontology.radical.world/level/intergalactic",
-      "skos:narrower": ["https://ontology.radical.world/level/stellar-system"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Galactic",
+      "description": "A gravitationally bound system of stars, stellar remnants, gas, dust, and dark matter.",
+      "broader": ["https://ontology.radical.world/level/intergalactic"],
+      "narrower": ["https://ontology.radical.world/level/stellar-system"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/intergalactic",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Intergalactic",
-      "skos:altLabel": ["Galaxy Cluster / Filament"],
-      "rdfs:comment": "Matter and space between galaxies; groups, clusters, and filaments.",
-      "skos:broader": "https://ontology.radical.world/level/universal",
-      "skos:narrower": ["https://ontology.radical.world/level/galactic"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Intergalactic",
+      "alias": ["Galaxy Cluster / Filament"],
+      "description": "Matter and space between galaxies; groups, clusters, and filaments.",
+      "broader": ["https://ontology.radical.world/level/universal"],
+      "narrower": ["https://ontology.radical.world/level/galactic"],
+      "inScheme": "rad:LevelScheme"
     },
     {
       "@id": "https://ontology.radical.world/level/universal",
-      "@type": ["rad:LevelOfOrganization","skos:Concept"],
-      "skos:prefLabel": "Universal",
-      "skos:altLabel": ["Cosmic","Universe"],
-      "rdfs:comment": "The totality of spacetime, matter, energy, and information.",
-      "skos:narrower": ["https://ontology.radical.world/level/intergalactic"],
-      "skos:inScheme": "rad:LevelScheme"
+      "type": "LevelOfOrganization",
+      "name": "Universal",
+      "alias": ["Cosmic","Universe"],
+      "description": "The totality of spacetime, matter, energy, and information.",
+      "broader": [],
+      "narrower": ["https://ontology.radical.world/level/intergalactic"],
+      "inScheme": "rad:LevelScheme"
     }
   ]
 }
