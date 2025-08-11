@@ -1,6 +1,36 @@
 {
   "@context": "https://radical.world/ontology/context.jsonld",
+  {
+  "@context": "https://ontology.radical.world/v1/context.jsonld",
   "@graph": [
+    {
+      "@id": "rad:integrating-signals",
+      "@type": ["LifeFunction", "skos:Concept"],
+      "name": "Integrating Signals",
+      "description": "Collecting and combining incoming signals from the environment or internal subsystems.",
+      "inScheme": "rad:LifeFunctionScheme"
+    },
+    {
+      "@id": "rad:assessing-response",
+      "@type": ["LifeFunction", "skos:Concept"],
+      "name": "Assessing Response",
+      "description": "Evaluating conditions to determine appropriate responses or actions.",
+      "inScheme": "rad:LifeFunctionScheme"
+    },
+    {
+      "@id": "rad:distributing-resources",
+      "@type": ["LifeFunction", "skos:Concept"],
+      "name": "Distributing Resources",
+      "description": "Allocating energy, matter, or information to where it is needed within the system.",
+      "inScheme": "rad:LifeFunctionScheme"
+    },
+    {
+      "@id": "rad:maintaining-boundaries",
+      "@type": ["LifeFunction", "skos:Concept"],
+      "name": "Maintaining Boundaries",
+      "description": "Regulating exchange between the system and its environment to sustain integrity.",
+      "inScheme": "rad:LifeFunctionScheme"
+    },
     {
       "@id": "https://radical.world/ontology/lifefunction/acquiring-resources",
       "@type": "LifeFunction",
