@@ -2,403 +2,144 @@
   "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
     {
-      "@id": "rad:LifeFunctionScheme",
-      "type": "ConceptScheme",
-      "name": "Life Functions",
-      "description": "Canonical life functions, generalized from Miller; flat, developer-friendly form."
-    },
-
-    {
-      "@id": "https://ontology.radical.world/lifefunction/acquiring-resources",
+      "id": "rad:Reproducing",
       "type": "LifeFunction",
-      "name": "Acquiring Resources",
-      "alias": ["ingest","intake","resource acquisition","import"],
-      "description": "Bringing in matter–energy from the environment for use by the system.",
-      "inputs": [],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/transforming-resources",
-        "https://ontology.radical.world/lifefunction/storing-resources"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
-        "https://ontology.radical.world/lifefunction/managing-exchanges"
-      ],
-      "originMillerTerm": "Ingestor",
-      "originNotes": "Generalizes intake across levels (nutrients, supply import, sunlight proxies)."
+      "name": "Reproducing",
+      "alias": ["Replication", "Propagation"],
+      "description": "The process by which living systems generate new entities of the same kind to maintain continuity over time.",
+      "originMillerTerm": "Reproduction",
+      "originNotes": "Adapted to include both biological and symbolic reproduction across living systems.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/transforming-resources",
-      "type": "LifeFunction",
-      "name": "Transforming Resources",
-      "alias": ["convert","process","metabolize","refine"],
-      "description": "Changing incoming matter–energy into usable forms.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/acquiring-resources"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/distributing-resources",
-        "https://ontology.radical.world/lifefunction/generating-usable-energy"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/adjusting-patterns"
-      ],
-      "originMillerTerm": "Converter",
-      "originNotes": "Digestion, refining, fabrication and other conversion processes."
-    },
-    {
-      "@id": "https://ontology.radical.world/lifefunction/distributing-resources",
-      "type": "LifeFunction",
-      "name": "Distributing Resources",
-      "alias": ["circulate","transport","allocate","route (materials)"],
-      "description": "Moving matter–energy internally to where it is needed.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/transforming-resources",
-        "https://ontology.radical.world/lifefunction/storing-resources",
-        "https://ontology.radical.world/lifefunction/acquiring-resources"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/storing-resources",
-        "https://ontology.radical.world/lifefunction/eliminating-byproducts"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/changing-position",
-        "https://ontology.radical.world/lifefunction/synchronizing-activities",
-        "https://ontology.radical.world/lifefunction/managing-exchanges"
-      ],
-      "originMillerTerm": "Distributor",
-      "originNotes": "Vascular/lymph, logistics/internal supply, ecosystem flow networks."
-    },
-    {
-      "@id": "https://ontology.radical.world/lifefunction/storing-resources",
-      "type": "LifeFunction",
-      "name": "Storing Resources",
-      "alias": ["reserve","buffer","cache","warehouse"],
-      "description": "Holding matter–energy in reserve for future use or stability.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/distributing-resources",
-        "https://ontology.radical.world/lifefunction/acquiring-resources"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/distributing-resources",
-        "https://ontology.radical.world/lifefunction/generating-usable-energy"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
-      ],
-      "originMillerTerm": "Storage",
-      "originNotes": "Fat, seeds, inventories, buffers, reservoirs."
-    },
-    {
-      "@id": "https://ontology.radical.world/lifefunction/maintaining-boundaries",
+      "id": "rad:Boundary",
       "type": "LifeFunction",
       "name": "Maintaining Boundaries",
-      "alias": ["permeability","gatekeeping","containment","interface control"],
-      "description": "Regulating exchanges with the environment to sustain structural and functional integrity.",
-      "inputs": [],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/acquiring-resources",
-        "https://ontology.radical.world/lifefunction/eliminating-byproducts"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/protecting-structure",
-        "https://ontology.radical.world/lifefunction/managing-exchanges"
-      ],
+      "alias": ["Border Control", "Membrane Function"],
+      "description": "The creation and maintenance of a boundary that separates the system from its environment while regulating exchanges.",
       "originMillerTerm": "Boundary",
-      "originNotes": "Membranes, walls, norms, APIs; regulation focus."
+      "originNotes": "Includes both physical and symbolic boundaries in systems.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/protecting-structure",
+      "id": "rad:Ingesting",
       "type": "LifeFunction",
-      "name": "Protecting the Structure",
-      "alias": ["defend","safeguard","stabilize","repair-deter"],
-      "description": "Preventing or mitigating damage or disruption from internal or external forces.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
-      ],
-      "outputs": [],
-      "related": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
-      ],
-      "originMillerTerm": "Protector",
-      "originNotes": "Immune responses, armor, error-checking, redundancy; resilience functions."
+      "name": "Ingesting",
+      "alias": ["Input Acquisition", "Energy Intake"],
+      "description": "The process of bringing energy, matter, or information into the system from the environment.",
+      "originMillerTerm": "Ingestor",
+      "originNotes": "Generalized to include informational ingestion in symbolic systems.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/eliminating-byproducts",
+      "id": "rad:Distributing",
       "type": "LifeFunction",
-      "name": "Eliminating Byproducts",
-      "alias": ["egest","expel","waste removal","export (waste)"],
-      "description": "Removing unusable or harmful matter–energy from the system.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/distributing-resources"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/managing-exchanges"
-      ],
-      "originMillerTerm": "Extruder / Excretory",
-      "originNotes": "Kidneys, lungs (CO₂), sanitation; also externalization in org/societal contexts."
+      "name": "Distributing",
+      "alias": ["Circulation", "Transport"],
+      "description": "The movement of energy, matter, or information within the system to where it is needed.",
+      "originMillerTerm": "Distributor",
+      "originNotes": "Includes both biological circulation and network distribution.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/changing-position",
+      "id": "rad:Converting",
       "type": "LifeFunction",
-      "name": "Changing Position",
-      "alias": ["move","locomote","reconfigure","actuate"],
-      "description": "Altering the location or configuration of the system or its parts in space.",
-      "inputs": [],
-      "outputs": [],
-      "related": [
-        "https://ontology.radical.world/lifefunction/distributing-resources",
-        "https://ontology.radical.world/lifefunction/synchronizing-activities",
-        "https://ontology.radical.world/lifefunction/assessing-response"
-      ],
-      "originMillerTerm": "Motor / Actuator",
-      "originNotes": "Movement at any level: organelles → organisms → organizations (deployments)."
+      "name": "Converting",
+      "alias": ["Metabolism", "Transformation"],
+      "description": "The transformation of energy, matter, or information into a form usable by the system.",
+      "originMillerTerm": "Converter",
+      "originNotes": "Covers both biochemical metabolism and symbolic transformation of meaning.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/generating-usable-energy",
+      "id": "rad:Producing",
       "type": "LifeFunction",
-      "name": "Generating Usable Energy",
-      "alias": ["energize","energy production","ATP generation","power supply"],
-      "description": "Producing usable energy from stored or incoming sources.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/transforming-resources",
-        "https://ontology.radical.world/lifefunction/storing-resources"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/distributing-resources",
-        "https://ontology.radical.world/lifefunction/changing-position",
-        "https://ontology.radical.world/lifefunction/synchronizing-activities"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/transforming-resources"
-      ],
-      "originMillerTerm": "Metabolic (energy focus)",
-      "originNotes": "ATP, electrical power, motive energy; typically routed via distribution."
+      "name": "Producing",
+      "alias": ["Output Generation", "Creation"],
+      "description": "The generation of outputs—material, energetic, or informational—for use inside or outside the system.",
+      "originMillerTerm": "Producer",
+      "originNotes": "Encompasses biological synthesis and symbolic creation.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
-
-    /* -------- information flows -------- */
-
     {
-      "@id": "https://ontology.radical.world/lifefunction/receiving-signals",
+      "id": "rad:Storing",
       "type": "LifeFunction",
-      "name": "Receiving Signals",
-      "alias": ["sense","detect","perceive","ingest information"],
-      "description": "Detecting external signals and translating them for internal use.",
-      "inputs": [],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/transforming-signals",
-        "https://ontology.radical.world/lifefunction/integrating-signals"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/managing-exchanges"
-      ],
+      "name": "Storing",
+      "alias": ["Retention", "Memory"],
+      "description": "The retention of energy, matter, or information for future use.",
+      "originMillerTerm": "Storage",
+      "originNotes": "Includes both biological reserves and memory in symbolic systems.",
+      "inScheme": "rad:LifeFunctionScheme"
+    },
+    {
+      "id": "rad:Moving",
+      "type": "LifeFunction",
+      "name": "Moving",
+      "alias": ["Locomotion", "Mobility"],
+      "description": "The physical relocation of the system or its parts in space.",
+      "originMillerTerm": "Mover",
+      "originNotes": "Includes movement at all scales, from cellular to planetary.",
+      "inScheme": "rad:LifeFunctionScheme"
+    },
+    {
+      "id": "rad:Sensing",
+      "type": "LifeFunction",
+      "name": "Sensing",
+      "alias": ["Perceiving", "Detection"],
+      "description": "The detection of changes in the environment or internal state of the system.",
       "originMillerTerm": "Input Transducer",
-      "originNotes": "Sensors, receptors, listeners, scouts; includes social listening."
+      "originNotes": "Covers sensory detection and symbolic perception.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/transforming-signals",
+      "id": "rad:Processing",
       "type": "LifeFunction",
-      "name": "Transforming Signals",
-      "alias": ["translate","recode","format","transduce (info)"],
-      "description": "Changing signal form or structure for internal or external use.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/receiving-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/distributing-signals",
-        "https://ontology.radical.world/lifefunction/integrating-signals",
-        "https://ontology.radical.world/lifefunction/sending-signals"
-      ],
-      "related": [],
-      "originMillerTerm": "Decoder / Encoder",
-      "originNotes": "Decoding, encoding, normalization; format conversion and interpretation."
+      "name": "Processing Information",
+      "alias": ["Computation", "Interpretation"],
+      "description": "The transformation, analysis, or interpretation of information within the system.",
+      "originMillerTerm": "Decoder / Associator",
+      "originNotes": "Includes both biological signal processing and symbolic reasoning.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/distributing-signals",
+      "id": "rad:Deciding",
       "type": "LifeFunction",
-      "name": "Distributing Signals",
-      "alias": ["route (info)","relay","circulate info","channel & net"],
-      "description": "Routing information between components inside the system.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/transforming-signals",
-        "https://ontology.radical.world/lifefunction/integrating-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/assessing-response",
-        "https://ontology.radical.world/lifefunction/synchronizing-activities"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/receiving-signals",
-        "https://ontology.radical.world/lifefunction/sending-signals"
-      ],
-      "originMillerTerm": "Internal Transducer / Channel & Net",
-      "originNotes": "Neural nets, comms, media networks, messaging buses."
-    },
-    {
-      "@id": "https://ontology.radical.world/lifefunction/integrating-signals",
-      "type": "LifeFunction",
-      "name": "Integrating Signals",
-      "alias": ["encode","consolidate","embed","store information"],
-      "description": "Incorporating signals into persistent internal patterns for potential future activation.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/receiving-signals",
-        "https://ontology.radical.world/lifefunction/transforming-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/reactivating-signals",
-        "https://ontology.radical.world/lifefunction/assessing-response"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/adjusting-patterns"
-      ],
-      "originMillerTerm": "Memory",
-      "originNotes": "Biological, institutional memory; persistence & plasticity."
-    },
-    {
-      "@id": "https://ontology.radical.world/lifefunction/reactivating-signals",
-      "type": "LifeFunction",
-      "name": "Reactivating Signals",
-      "alias": ["retrieve","recall","reinstantiate","pattern activation"],
-      "description": "Bringing stored patterns or signals into present use.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/integrating-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/assessing-response",
-        "https://ontology.radical.world/lifefunction/synchronizing-activities"
-      ],
-      "related": [],
-      "originMillerTerm": "Memory (recall)",
-      "originNotes": "Access pathways for previously integrated patterns; priming & cueing."
-    },
-    {
-      "@id": "https://ontology.radical.world/lifefunction/assessing-response",
-      "type": "LifeFunction",
-      "name": "Assessing Response",
-      "alias": ["evaluate","select action","choose","decide"],
-      "description": "Selecting a course of action based on the system’s current state and available signals.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/integrating-signals",
-        "https://ontology.radical.world/lifefunction/reactivating-signals",
-        "https://ontology.radical.world/lifefunction/distributing-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/synchronizing-activities",
-        "https://ontology.radical.world/lifefunction/sending-signals",
-        "https://ontology.radical.world/lifefunction/changing-position"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/adjusting-patterns"
-      ],
+      "name": "Deciding",
+      "alias": ["Choice Making", "Selecting"],
+      "description": "Selecting among possible actions or responses based on inputs and internal state.",
       "originMillerTerm": "Decider",
-      "originNotes": "Choice selection at any level—cellular switching to organizational governance."
+      "originNotes": "Covers decision-making in both biological and symbolic systems.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/synchronizing-activities",
+      "id": "rad:Acting",
       "type": "LifeFunction",
-      "name": "Synchronizing Activities",
-      "alias": ["coordinate","schedule","orchestrate","time/tempo control"],
-      "description": "Aligning the timing and interaction of different processes.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/assessing-response",
-        "https://ontology.radical.world/lifefunction/distributing-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/transforming-resources",
-        "https://ontology.radical.world/lifefunction/distributing-resources"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/changing-position"
-      ],
-      "originMillerTerm": "Timer / Coordinator",
-      "originNotes": "Circadian/endocrine timing, project schedules, protocol orchestration."
-    },
-    {
-      "@id": "https://ontology.radical.world/lifefunction/sending-signals",
-      "type": "LifeFunction",
-      "name": "Sending Signals",
-      "alias": ["signal-out","broadcast","express","export (info)"],
-      "description": "Translating internal information into signals to the environment.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/assessing-response",
-        "https://ontology.radical.world/lifefunction/transforming-signals"
-      ],
-      "outputs": [],
-      "related": [
-        "https://ontology.radical.world/lifefunction/managing-exchanges"
-      ],
+      "name": "Acting",
+      "alias": ["Execution", "Response"],
+      "description": "Carrying out selected actions that affect the system or environment.",
       "originMillerTerm": "Output Transducer",
-      "originNotes": "Secretion, expression, publishing, APIs/webhooks; supports interaction and adoption."
+      "originNotes": "Includes biological action and symbolic communication.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/adjusting-patterns",
+      "id": "rad:Regulating",
       "type": "LifeFunction",
-      "name": "Adjusting Patterns",
-      "alias": ["adapt","learn","reconfigure","plasticity"],
-      "description": "Modifying structures, behaviors, or processes in response to changing conditions.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/assessing-response",
-        "https://ontology.radical.world/lifefunction/integrating-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
-        "https://ontology.radical.world/lifefunction/transforming-resources",
-        "https://ontology.radical.world/lifefunction/synchronizing-activities"
-      ],
-      "related": [],
-      "originMillerTerm": "Associator / Learning / Adaptation",
-      "originNotes": "Enables structural tuning and long-term change; institutional learning."
-    },
-
-    /* -------- hybrid / lineage -------- */
-
-    {
-      "@id": "https://ontology.radical.world/lifefunction/regenerating-continuity",
-      "type": "LifeFunction",
-      "name": "Regenerating Continuity",
-      "alias": ["reproduce","renew","propagate","replicate"],
-      "description": "Creating new systems or components to sustain lineage and persistence.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/generating-usable-energy",
-        "https://ontology.radical.world/lifefunction/integrating-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/acquiring-resources",
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/adjusting-patterns"
-      ],
-      "originMillerTerm": "Reproducer",
-      "originNotes": "Cell division, reproduction, replication; organizational spin-outs/fission."
+      "name": "Regulating",
+      "alias": ["Control", "Homeostasis"],
+      "description": "Maintaining stability within the system by adjusting processes in response to changes.",
+      "originMillerTerm": "Regulator",
+      "originNotes": "Covers physiological and symbolic regulation mechanisms.",
+      "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "@id": "https://ontology.radical.world/lifefunction/managing-exchanges",
+      "id": "rad:Excreting",
       "type": "LifeFunction",
-      "name": "Managing Exchanges",
-      "alias": ["interface","exchange","interact","negotiate"],
-      "description": "Handling flows of matter–energy and information between system and environment.",
-      "inputs": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
-        "https://ontology.radical.world/lifefunction/receiving-signals",
-        "https://ontology.radical.world/lifefunction/sending-signals"
-      ],
-      "outputs": [
-        "https://ontology.radical.world/lifefunction/acquiring-resources",
-        "https://ontology.radical.world/lifefunction/distributing-resources",
-        "https://ontology.radical.world/lifefunction/distributing-signals",
-        "https://ontology.radical.world/lifefunction/eliminating-byproducts"
-      ],
-      "related": [
-        "https://ontology.radical.world/lifefunction/maintaining-boundaries",
-        "https://ontology.radical.world/lifefunction/acquiring-resources",
-        "https://ontology.radical.world/lifefunction/receiving-signals",
-        "https://ontology.radical.world/lifefunction/sending-signals"
-      ],
-      "originMillerTerm": "Interface (multiple subsystems)",
-      "originNotes": "Negotiation at edges: foraging, trade, signaling, API interop; hub, not a parent."
+      "name": "Excreting",
+      "alias": ["Waste Removal", "Elimination"],
+      "description": "The removal of unneeded or harmful outputs from the system.",
+      "originMillerTerm": "Excretor",
+      "originNotes": "Includes biological waste elimination and symbolic offloading of obsolete information.",
+      "inScheme": "rad:LifeFunctionScheme"
     }
   ]
 }
