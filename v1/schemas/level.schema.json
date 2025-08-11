@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unconditionedlife.github.io/radical-ontology/v1/schemas/level.schema.json",
+  "title": "LevelOfOrganization",
+  "type": "object",
+  "required": ["@id", "type", "name", "description"],
+  "properties": {
+    "@id": { "type": "string", "format": "uri" },
+    "type": {
+      "oneOf": [
+        { "type": "string", "const": "LevelOfOrganization" },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "contains": { "const": "LevelOfOrganization" }
+        }
+      ]
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "alias": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "description": { "type": "string", "minLength": 1 },
+    "broader": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "uniqueItems": true
+    },
+    "narrower": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "uniqueItems": true
+    },
+    "inScheme": { "type": "string" }
+  },
+  "additionalProperties": true
+}
