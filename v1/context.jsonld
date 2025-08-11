@@ -19,6 +19,11 @@
     },
     "description": "schema:description",
 
+    "operatesOn": { "@id": "rad:operatesOn", "@type": "@id", "@container": "@set" },
+    "Substrate": "rad:Substrate",
+    "Signal": "rad:Signal",
+    "MatterEnergy": "rad:MatterEnergy"
+    
     "relatedFunction": { "@id": "rad:relatedFunction", "@type": "@id" },
     "relatedLevel": { "@id": "rad:relatedLevel", "@type": "@id" },
 
