@@ -2,7 +2,7 @@
   "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
     {
-      "id": "rad:Reproducing",
+      "@id": "rad:Reproducing",
       "type": "LifeFunction",
       "name": "Reproducing",
       "alias": ["Replication", "Propagation"],
@@ -12,7 +12,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Boundary",
+      "@id": "rad:Boundary",
       "type": "LifeFunction",
       "name": "Maintaining Boundaries",
       "alias": ["Border Control", "Membrane Function"],
@@ -22,7 +22,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Ingesting",
+      "@id": "rad:Ingesting",
       "type": "LifeFunction",
       "name": "Ingesting",
       "alias": ["Input Acquisition", "Energy Intake"],
@@ -32,7 +32,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Distributing",
+      "@id": "rad:Distributing",
       "type": "LifeFunction",
       "name": "Distributing",
       "alias": ["Circulation", "Transport"],
@@ -42,7 +42,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Converting",
+      "@id": "rad:Converting",
       "type": "LifeFunction",
       "name": "Converting",
       "alias": ["Metabolism", "Transformation"],
@@ -52,7 +52,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Producing",
+      "@id": "rad:Producing",
       "type": "LifeFunction",
       "name": "Producing",
       "alias": ["Output Generation", "Creation"],
@@ -62,7 +62,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Storing",
+      "@id": "rad:Storing",
       "type": "LifeFunction",
       "name": "Storing",
       "alias": ["Retention", "Memory"],
@@ -72,7 +72,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Moving",
+      "@id": "rad:Moving",
       "type": "LifeFunction",
       "name": "Moving",
       "alias": ["Locomotion", "Mobility"],
@@ -82,7 +82,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Sensing",
+      "@id": "rad:Sensing",
       "type": "LifeFunction",
       "name": "Sensing",
       "alias": ["Perceiving", "Detection"],
@@ -92,7 +92,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Processing",
+      "@id": "rad:Processing",
       "type": "LifeFunction",
       "name": "Processing Information",
       "alias": ["Computation", "Interpretation"],
@@ -102,7 +102,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Deciding",
+      "@id": "rad:Deciding",
       "type": "LifeFunction",
       "name": "Deciding",
       "alias": ["Choice Making", "Selecting"],
@@ -112,7 +112,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Acting",
+      "@id": "rad:Acting",
       "type": "LifeFunction",
       "name": "Acting",
       "alias": ["Execution", "Response"],
@@ -122,7 +122,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Regulating",
+      "@id": "rad:Regulating",
       "type": "LifeFunction",
       "name": "Regulating",
       "alias": ["Control", "Homeostasis"],
@@ -132,7 +132,7 @@
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
-      "id": "rad:Excreting",
+      "@id": "rad:Excreting",
       "type": "LifeFunction",
       "name": "Excreting",
       "alias": ["Waste Removal", "Elimination"],
