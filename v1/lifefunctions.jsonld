@@ -1,5 +1,5 @@
 {
-  "@context": "https://ontology.radical.world/v1/context.jsonld",
+  "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
     {
       "@id": "rad:LifeFunctionScheme",
