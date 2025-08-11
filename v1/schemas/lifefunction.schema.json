@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unconditionedlife.github.io/radical-ontology/v1/schemas/lifefunction.schema.json",
+  "title": "LifeFunction",
+  "type": "object",
+  "required": ["@id", "type", "name", "description"],
+  "properties": {
+    "@id": { "type": "string", "format": "uri" },
+    "type": {
+      "oneOf": [
+        { "type": "string", "const": "LifeFunction" },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "contains": { "const": "LifeFunction" }
+        }
+      ]
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "alias": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "description": { "type": "string", "minLength": 1 },
+    "inputs": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "uniqueItems": true
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "uniqueItems": true
+    },
+    "related": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "uniqueItems": true
+    },
+    "originMillerTerm": { "type": "string" },
+    "originNotes": { "type": "string" }
+  },
+  "additionalProperties": true
+}
