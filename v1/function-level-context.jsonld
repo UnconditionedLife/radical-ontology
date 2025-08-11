@@ -2,46 +2,165 @@
   "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
     {
-      "@id": "rad:LifeFunction",
-      "@type": "rdfs:Class",
-      "name": "Life Function",
-      "description": "A fundamental process observed across living systems, adapted and generalized from James Grier Miller's Living Systems Theory."
+      "@id": "https://ontology.radical.world/flc/acquire-organism",
+      "type": "FunctionLevelContext",
+      "name": "Acquiring Resources · Organism",
+      "description": "Acquiring matter–energy by foraging, feeding, or symbiotic intake (including photosynthesis proxies).",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/acquiring-resources",
+      "relatedLevel": "https://ontology.radical.world/level/organism"
     },
     {
-      "@id": "rad:LevelOfOrganization",
-      "@type": "rdfs:Class",
-      "name": "Level of Organization",
-      "description": "A scale or scope at which living systems organize, from subatomic to planetary and beyond."
+      "@id": "https://ontology.radical.world/flc/transform-cellular",
+      "type": "FunctionLevelContext",
+      "name": "Transforming Resources · Cellular",
+      "description": "Transforming inputs via catabolism/anabolism, folding, and post-translational modification.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/transforming-resources",
+      "relatedLevel": "https://ontology.radical.world/level/cellular"
     },
     {
-      "@id": "rad:FunctionLevelContext",
-      "@type": "rdfs:Class",
-      "name": "Function-Level Context",
-      "description": "The contextual description of a Life Function at a specific Level of Organization."
+      "@id": "https://ontology.radical.world/flc/distribute-organization",
+      "type": "FunctionLevelContext",
+      "name": "Distributing Resources · Organization",
+      "description": "Distributing materials internally through logistics, procurement, allocation, and routing.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/distributing-resources",
+      "relatedLevel": "https://ontology.radical.world/level/organization"
     },
     {
-      "@id": "rad:relatedFunction",
-      "@type": "rdf:Property",
-      "name": "Related Function",
-      "description": "Links a Function-Level Context to its canonical Life Function."
+      "@id": "https://ontology.radical.world/flc/store-ecosystem",
+      "type": "FunctionLevelContext",
+      "name": "Storing Resources · Ecosystem",
+      "description": "Storing resources as soil carbon, groundwater, biomass, and nutrient banks for resilience.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/storing-resources",
+      "relatedLevel": "https://ontology.radical.world/level/ecosystem"
     },
     {
-      "@id": "rad:relatedLevel",
-      "@type": "rdf:Property",
-      "name": "Related Level",
-      "description": "Links a Function-Level Context to its Level of Organization."
+      "@id": "https://ontology.radical.world/flc/boundary-organization",
+      "type": "FunctionLevelContext",
+      "name": "Maintaining Boundaries · Organization",
+      "description": "Maintaining boundaries with policies, norms, roles, and APIs that regulate exchanges.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/maintaining-boundaries",
+      "relatedLevel": "https://ontology.radical.world/level/organization"
     },
     {
-      "@id": "rad:LifeFunctionScheme",
-      "@type": "skos:ConceptScheme",
-      "name": "Life Functions Scheme",
-      "description": "The concept scheme that defines and organizes canonical Life Functions."
+      "@id": "https://ontology.radical.world/flc/protect-organism",
+      "type": "FunctionLevelContext",
+      "name": "Protecting the Structure · Organism",
+      "description": "Protecting integrity via immune defenses, reflexes, repair, redundancy, and hardening.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/protecting-structure",
+      "relatedLevel": "https://ontology.radical.world/level/organism"
     },
     {
-      "@id": "rad:LevelScheme",
-      "@type": "skos:ConceptScheme",
-      "name": "Levels of Organization Scheme",
-      "description": "The concept scheme that defines and organizes Levels of Organization."
+      "@id": "https://ontology.radical.world/flc/eliminate-city",
+      "type": "FunctionLevelContext",
+      "name": "Eliminating Byproducts · City",
+      "description": "Eliminating byproducts through sanitation, emissions handling, and circularity pathways.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/eliminating-byproducts",
+      "relatedLevel": "https://ontology.radical.world/level/city"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/move-organism",
+      "type": "FunctionLevelContext",
+      "name": "Changing Position · Organism",
+      "description": "Changing position through locomotion, migration, posture shifts, and morphodynamics.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/changing-position",
+      "relatedLevel": "https://ontology.radical.world/level/organism"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/energy-organization",
+      "type": "FunctionLevelContext",
+      "name": "Generating Usable Energy · Organization",
+      "description": "Generating usable energy by producing, procuring, and storing power for operations.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/generating-usable-energy",
+      "relatedLevel": "https://ontology.radical.world/level/organization"
+    },
+
+    {
+      "@id": "https://ontology.radical.world/flc/receive-group",
+      "type": "FunctionLevelContext",
+      "name": "Receiving Signals · Group",
+      "description": "Receiving signals via environmental sensing, stakeholder feedback, and team awareness.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/receiving-signals",
+      "relatedLevel": "https://ontology.radical.world/level/group"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/transform-signal-dyad",
+      "type": "FunctionLevelContext",
+      "name": "Transforming Signals · Dyad",
+      "description": "Transforming signals through mutual translation, clarification, and shared coding.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/transforming-signals",
+      "relatedLevel": "https://ontology.radical.world/level/dyad"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/distribute-signals-network",
+      "type": "FunctionLevelContext",
+      "name": "Distributing Signals · Network",
+      "description": "Distributing signals across distributed actors via message buses, feeds, and relays.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/distributing-signals",
+      "relatedLevel": "https://ontology.radical.world/level/network"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/integrate-signal-organization",
+      "type": "FunctionLevelContext",
+      "name": "Integrating Signals · Organization",
+      "description": "Integrating signals into institutional memory, knowledge bases, and learning repositories.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/integrating-signals",
+      "relatedLevel": "https://ontology.radical.world/level/organization"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/reactivate-signal-individual",
+      "type": "FunctionLevelContext",
+      "name": "Reactivating Signals · Organism",
+      "description": "Reactivating signals through recall, priming, attention, and recognition dynamics.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/reactivating-signals",
+      "relatedLevel": "https://ontology.radical.world/level/organism"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/assess-organization",
+      "type": "FunctionLevelContext",
+      "name": "Assessing Response · Organization",
+      "description": "Assessing response by evaluating options, estimating risk, and selecting actions.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/assessing-response",
+      "relatedLevel": "https://ontology.radical.world/level/organization"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/sync-network",
+      "type": "FunctionLevelContext",
+      "name": "Synchronizing Activities · Network",
+      "description": "Synchronizing activities via schedules, cadence, coordination protocols, and consensus.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/synchronizing-activities",
+      "relatedLevel": "https://ontology.radical.world/level/network"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/send-signal-community",
+      "type": "FunctionLevelContext",
+      "name": "Sending Signals · Community",
+      "description": "Sending signals outward through public communications and external interfaces.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/sending-signals",
+      "relatedLevel": "https://ontology.radical.world/level/community"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/adjust-organization",
+      "type": "FunctionLevelContext",
+      "name": "Adjusting Patterns · Organization",
+      "description": "Adjusting patterns by learning and tuning structures, policies, and processes.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/adjusting-patterns",
+      "relatedLevel": "https://ontology.radical.world/level/organization"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/regenerate-population",
+      "type": "FunctionLevelContext",
+      "name": "Regenerating Continuity · Population",
+      "description": "Regenerating continuity through reproduction, renewal, and succession dynamics.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/regenerating-continuity",
+      "relatedLevel": "https://ontology.radical.world/level/population"
+    },
+    {
+      "@id": "https://ontology.radical.world/flc/exchange-city",
+      "type": "FunctionLevelContext",
+      "name": "Managing Exchanges · City",
+      "description": "Managing exchanges at urban edges for trade, mobility, and information flow.",
+      "relatedFunction": "https://ontology.radical.world/lifefunction/managing-exchanges",
+      "relatedLevel": "https://ontology.radical.world/level/city"
     }
   ]
 }
