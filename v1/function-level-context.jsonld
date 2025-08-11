@@ -1,0 +1,47 @@
+{
+  "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
+  "@graph": [
+    {
+      "@id": "rad:LifeFunction",
+      "@type": "rdfs:Class",
+      "name": "Life Function",
+      "description": "A fundamental process observed across living systems, adapted and generalized from James Grier Miller's Living Systems Theory."
+    },
+    {
+      "@id": "rad:LevelOfOrganization",
+      "@type": "rdfs:Class",
+      "name": "Level of Organization",
+      "description": "A scale or scope at which living systems organize, from subatomic to planetary and beyond."
+    },
+    {
+      "@id": "rad:FunctionLevelContext",
+      "@type": "rdfs:Class",
+      "name": "Function-Level Context",
+      "description": "The contextual description of a Life Function at a specific Level of Organization."
+    },
+    {
+      "@id": "rad:relatedFunction",
+      "@type": "rdf:Property",
+      "name": "Related Function",
+      "description": "Links a Function-Level Context to its canonical Life Function."
+    },
+    {
+      "@id": "rad:relatedLevel",
+      "@type": "rdf:Property",
+      "name": "Related Level",
+      "description": "Links a Function-Level Context to its Level of Organization."
+    },
+    {
+      "@id": "rad:LifeFunctionScheme",
+      "@type": "skos:ConceptScheme",
+      "name": "Life Functions Scheme",
+      "description": "The concept scheme that defines and organizes canonical Life Functions."
+    },
+    {
+      "@id": "rad:LevelScheme",
+      "@type": "skos:ConceptScheme",
+      "name": "Levels of Organization Scheme",
+      "description": "The concept scheme that defines and organizes Levels of Organization."
+    }
+  ]
+}
