@@ -1,50 +1,47 @@
 {
-  "@context": {
-    "@vocab": "https://ontology.radical.world/",
-    "schema": "http://schema.org/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-  },
+  "@context": "https://unconditionedlife.github.io/radical-ontology/v1/context.jsonld",
   "@graph": [
     {
       "@id": "rad:LifeFunction",
       "@type": "rdfs:Class",
-      "rdfs:label": "Life Function",
-      "rdfs:comment": "A fundamental process observed across living systems, adapted from and generalized from James Grier Miller's Living Systems Theory."
+      "name": "Life Function",
+      "description": "A fundamental process observed across living systems, adapted and generalized from James Grier Miller's Living Systems Theory."
     },
     {
       "@id": "rad:LevelOfOrganization",
       "@type": "rdfs:Class",
-      "rdfs:label": "Level of Organization",
-      "rdfs:comment": "A scale or scope at which living systems organize, from subatomic to planetary and beyond."
+      "name": "Level of Organization",
+      "description": "A scale or scope at which living systems organize, from subatomic to planetary and beyond."
     },
     {
       "@id": "rad:FunctionLevelContext",
       "@type": "rdfs:Class",
-      "rdfs:label": "Function-Level Context",
-      "rdfs:comment": "The contextual description of a Life Function at a specific Level of Organization."
+      "name": "Function-Level Context",
+      "description": "The contextual description of a Life Function at a specific Level of Organization."
     },
     {
       "@id": "rad:relatedFunction",
       "@type": "rdf:Property",
-      "rdfs:label": "Related Function",
-      "rdfs:comment": "Links a Function-Level Context to its canonical Life Function."
+      "name": "Related Function",
+      "description": "Links a Function-Level Context to its canonical Life Function."
     },
     {
       "@id": "rad:relatedLevel",
       "@type": "rdf:Property",
-      "rdfs:label": "Related Level",
-      "rdfs:comment": "Links a Function-Level Context to its Level of Organization."
+      "name": "Related Level",
+      "description": "Links a Function-Level Context to its Level of Organization."
     },
     {
       "@id": "rad:LifeFunctionScheme",
       "@type": "skos:ConceptScheme",
-      "rdfs:label": "Life Functions Scheme"
+      "name": "Life Functions Scheme",
+      "description": "The concept scheme that defines and organizes canonical Life Functions."
     },
     {
       "@id": "rad:LevelScheme",
       "@type": "skos:ConceptScheme",
-      "rdfs:label": "Levels of Organization Scheme"
+      "name": "Levels of Organization Scheme",
+      "description": "The concept scheme that defines and organizes Levels of Organization."
     }
   ]
 }
