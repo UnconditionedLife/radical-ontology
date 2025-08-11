@@ -16,6 +16,9 @@
       "description": "The process by which living systems generate new entities of the same kind to maintain continuity over time.",
       "originMillerTerm": "Reproducer",
       "originNotes": "Adapted to include both biological and symbolic reproduction across living systems.",
+      "inputs": ["rad:Producing"],
+      "outputs": [],
+      "related": ["rad:Boundary", "rad:Regulating"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -26,6 +29,9 @@
       "description": "The creation and maintenance of a boundary that separates the system from its environment while regulating exchanges.",
       "originMillerTerm": "Boundary",
       "originNotes": "Includes both physical and symbolic boundaries in systems.",
+      "inputs": [],
+      "outputs": ["rad:Ingesting", "rad:Excreting"],
+      "related": ["rad:Regulating"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -36,6 +42,9 @@
       "description": "The process of bringing energy, matter, or information into the system from the environment.",
       "originMillerTerm": "Ingestor",
       "originNotes": "Generalized to include informational ingestion in symbolic systems.",
+      "inputs": ["rad:Boundary"],
+      "outputs": ["rad:Distributing", "rad:Storing"],
+      "related": ["rad:Sensing"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -46,6 +55,9 @@
       "description": "The movement of energy, matter, or information within the system to where it is needed.",
       "originMillerTerm": "Distributor",
       "originNotes": "Includes both biological circulation and network distribution.",
+      "inputs": ["rad:Ingesting", "rad:Storing"],
+      "outputs": ["rad:Converting", "rad:Producing"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -56,6 +68,9 @@
       "description": "The transformation of energy, matter, or information into a form usable by the system.",
       "originMillerTerm": "Converter",
       "originNotes": "Covers both biochemical metabolism and symbolic transformation of meaning.",
+      "inputs": ["rad:Distributing"],
+      "outputs": ["rad:Producing"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -66,6 +81,9 @@
       "description": "The generation of outputs—material, energetic, or informational—for use inside or outside the system.",
       "originMillerTerm": "Producer",
       "originNotes": "Encompasses biological synthesis and symbolic creation.",
+      "inputs": ["rad:Converting", "rad:Distributing"],
+      "outputs": ["rad:Reproducing", "rad:Acting"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -76,6 +94,9 @@
       "description": "The retention of energy, matter, or information for future use.",
       "originMillerTerm": "Matter–Energy Storage",
       "originNotes": "Includes both biological reserves and memory in symbolic systems.",
+      "inputs": ["rad:Ingesting"],
+      "outputs": ["rad:Distributing", "rad:Producing"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -86,6 +107,9 @@
       "description": "The physical relocation of the system or its parts in space.",
       "originMillerTerm": "Motor / Actuator",
       "originNotes": "Includes movement at all scales, from cellular to planetary.",
+      "inputs": ["rad:Acting"],
+      "outputs": [],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -96,6 +120,9 @@
       "description": "The detection of changes in the environment or internal state of the system.",
       "originMillerTerm": "Input Transducer",
       "originNotes": "Covers sensory detection and symbolic perception.",
+      "inputs": [],
+      "outputs": ["rad:Processing"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -106,6 +133,9 @@
       "description": "The transformation, analysis, or interpretation of information within the system.",
       "originMillerTerm": "Decoder / Associator / Encoder",
       "originNotes": "Includes decoding, encoding, and associative learning/interpretation.",
+      "inputs": ["rad:Sensing"],
+      "outputs": ["rad:Deciding"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -116,6 +146,9 @@
       "description": "Selecting among possible actions or responses based on inputs and internal state.",
       "originMillerTerm": "Decider",
       "originNotes": "Covers decision-making in both biological and symbolic systems.",
+      "inputs": ["rad:Processing"],
+      "outputs": ["rad:Acting"],
+      "related": ["rad:Regulating"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -126,6 +159,9 @@
       "description": "Carrying out selected actions that affect the system or environment.",
       "originMillerTerm": "Output Transducer",
       "originNotes": "Includes biological action and symbolic communication.",
+      "inputs": ["rad:Deciding", "rad:Producing"],
+      "outputs": ["rad:Moving", "rad:Excreting"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -136,6 +172,9 @@
       "description": "Maintaining stability within the system by adjusting processes in response to changes.",
       "originMillerTerm": "Multiple (control functions: Timer, Decider, Associator)",
       "originNotes": "Regulation spans timing, decision, and learning subsystems rather than a single Miller subsystem.",
+      "inputs": ["rad:Sensing", "rad:Processing", "rad:Deciding"],
+      "outputs": ["rad:Boundary", "rad:Reproducing"],
+      "related": [],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -146,6 +185,9 @@
       "description": "The removal of unneeded or harmful outputs from the system.",
       "originMillerTerm": "Extruder / Excretory",
       "originNotes": "Includes biological waste elimination and externalization of unusable outputs.",
+      "inputs": ["rad:Acting"],
+      "outputs": [],
+      "related": ["rad:Boundary"],
       "inScheme": "rad:LifeFunctionScheme"
     }
   ]
