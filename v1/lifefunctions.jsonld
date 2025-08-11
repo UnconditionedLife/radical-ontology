@@ -7,7 +7,6 @@
       "name": "Life Functions",
       "description": "Canonical life functions, generalized from Miller; flat, developer-friendly form."
     },
-
     {
       "@id": "rad:Reproducing",
       "type": "LifeFunction",
@@ -19,6 +18,7 @@
       "inputs": ["rad:Producing"],
       "outputs": [],
       "related": ["rad:Boundary", "rad:Regulating"],
+      "operatesOn": ["rad:Signal", "rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -32,6 +32,7 @@
       "inputs": [],
       "outputs": ["rad:Ingesting", "rad:Excreting"],
       "related": ["rad:Regulating"],
+      "operatesOn": ["rad:Signal", "rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -45,6 +46,7 @@
       "inputs": ["rad:Boundary"],
       "outputs": ["rad:Distributing", "rad:Storing"],
       "related": ["rad:Sensing"],
+      "operatesOn": ["rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -58,6 +60,7 @@
       "inputs": ["rad:Ingesting", "rad:Storing"],
       "outputs": ["rad:Converting", "rad:Producing"],
       "related": [],
+      "operatesOn": ["rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -71,6 +74,7 @@
       "inputs": ["rad:Distributing"],
       "outputs": ["rad:Producing"],
       "related": [],
+      "operatesOn": ["rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -84,6 +88,7 @@
       "inputs": ["rad:Converting", "rad:Distributing"],
       "outputs": ["rad:Reproducing", "rad:Acting"],
       "related": [],
+      "operatesOn": ["rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -97,6 +102,7 @@
       "inputs": ["rad:Ingesting"],
       "outputs": ["rad:Distributing", "rad:Producing"],
       "related": [],
+      "operatesOn": ["rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -110,6 +116,7 @@
       "inputs": ["rad:Acting"],
       "outputs": [],
       "related": [],
+      "operatesOn": ["rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -123,6 +130,7 @@
       "inputs": [],
       "outputs": ["rad:Processing"],
       "related": [],
+      "operatesOn": ["rad:Signal"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -136,6 +144,7 @@
       "inputs": ["rad:Sensing"],
       "outputs": ["rad:Deciding"],
       "related": [],
+      "operatesOn": ["rad:Signal"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -149,6 +158,7 @@
       "inputs": ["rad:Processing"],
       "outputs": ["rad:Acting"],
       "related": ["rad:Regulating"],
+      "operatesOn": ["rad:Signal"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -162,6 +172,7 @@
       "inputs": ["rad:Deciding", "rad:Producing"],
       "outputs": ["rad:Moving", "rad:Excreting"],
       "related": [],
+      "operatesOn": ["rad:Signal", "rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -175,6 +186,7 @@
       "inputs": ["rad:Sensing", "rad:Processing", "rad:Deciding"],
       "outputs": ["rad:Boundary", "rad:Reproducing"],
       "related": [],
+      "operatesOn": ["rad:Signal", "rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     },
     {
@@ -188,6 +200,7 @@
       "inputs": ["rad:Acting"],
       "outputs": [],
       "related": ["rad:Boundary"],
+      "operatesOn": ["rad:MatterEnergy"],
       "inScheme": "rad:LifeFunctionScheme"
     }
   ]
